@@ -185,7 +185,8 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://github.com/agelmet/pap/blob/main/onlinee.jpg?raw=true'); background-size:cover; background-position:center; color:var(--c-bg);position:relative;overflow:hidden}
+/* Added slightly more padding to prevent cropping and used center center / cover */
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://github.com/agelmet/pap/blob/main/onlinee.jpg?raw=true') center center / cover no-repeat; color:var(--c-bg);position:relative;overflow:hidden; padding: clamp(4.5rem, 12vw, 8rem) clamp(1.2rem, 5vw, 4rem);}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
 .online-tag::before{background:var(--c-accent-light)}
@@ -1001,6 +1002,7 @@ ul{list-style:none}
 <div class="contact-left">
   <div class="section-tag reveal" data-el="gr">Επικοινωνία</div>
   <div class="section-tag reveal" data-el="en" style="display:none">Contact</div>
+  
   <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg)" data-el="gr">Το πρώτο βήμα<br>είναι να <span class="accent">ακουστείς</span></h2>
   <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg); display:none;" data-el="en">The first step<br>is to be <span class="accent">heard</span></h2>
   
@@ -1046,7 +1048,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3144.33125672005!2d23.75084931210815!3d37.99268307180497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b0cecd91bb%3A0x675fcd6d8c832bb5!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEF0aGluYSAxMTQgNzE!5e0!3m2!1sen!2sgr!4v1700000000000!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Αθήνα&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
@@ -1089,17 +1091,23 @@ document.getElementById('mobileMenu').classList.remove('active');
 document.body.style.overflow='';
 }
 
-// Language toggle (Bilingual function restored)
+// Language toggle
 let currentLang='gr';
 function toggleLang(){
 currentLang=currentLang==='gr'?'en':'gr';
 const showLang=currentLang;
 const hideLang=currentLang==='gr'?'en':'gr';
+
+// Toggle standard elements
 document.querySelectorAll('[data-el="'+showLang+'"]').forEach(el=>el.style.display='');
 document.querySelectorAll('[data-el="'+hideLang+'"]').forEach(el=>el.style.display='none');
+
+// Update Buttons text
 document.getElementById('langBtn').textContent=currentLang==='gr'?'EN':'GR';
 const mb=document.getElementById('mobLangBtn');
 if(mb)mb.textContent=currentLang==='gr'?'EN':'GR';
+
+// Update Document Lang tag
 document.documentElement.lang=currentLang==='gr'?'el':'en';
 
 // Update review read-more buttons based on expanded state and language
