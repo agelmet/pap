@@ -42,9 +42,9 @@ ul{list-style:none}
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease-smooth)}
-.nav.scrolled{background:rgba(250,248,245,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--c-border)}
+.nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--c-border)}
 .nav-brand{cursor:pointer;display:flex;align-items:center;gap:.8rem}
-.nav-brand-logo{width:72px;height:72px;object-fit:contain;flex-shrink:0;transition:all .3s} /* INCREASED LOGO SIZE */
+.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s}
 .nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-text);line-height:1.2}
 .nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-text-muted);margin-top:2px}
 .nav-right{display:flex;align-items:center;gap:2rem}
@@ -185,8 +185,7 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-.online{background:var(--c-burgundy);color:var(--c-bg);position:relative;overflow:hidden}
-.online::before{content:'';position:absolute;inset:0;opacity:.1;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="55" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,55 Q85,70 70,75 T40,70 T10,65" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,65 Q12,60 15,65 Q18,70 15,75 T10,75 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:cover;background-position:center}
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://github.com/agelmet/pap/blob/main/onlinee.jpg?raw=true'); background-size:cover; background-position:center; color:var(--c-bg);position:relative;overflow:hidden}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
 .online-tag::before{background:var(--c-accent-light)}
@@ -342,7 +341,7 @@ ul{list-style:none}
 
 @media(max-width:768px){
   .nav{padding:1rem 1.2rem;padding-top:env(safe-area-inset-top,.6rem)}
-  .nav-brand-logo{width:48px;height:48px}
+  .nav-brand-logo{width:60px;height:60px}
   .nav-brand-name{font-size:.7rem;letter-spacing:.05em}
   .nav-brand-title{font-size:.45rem;letter-spacing:.12em}
   .hero{min-height:100svh; background-color: var(--c-bg); align-items:flex-end;}
@@ -1003,7 +1002,7 @@ ul{list-style:none}
   <div class="section-tag reveal" data-el="gr">Επικοινωνία</div>
   <div class="section-tag reveal" data-el="en" style="display:none">Contact</div>
   <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg)" data-el="gr">Το πρώτο βήμα<br>είναι να <span class="accent">ακουστείς</span></h2>
-  <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg)" data-el="en" style="display:none">The first step<br>is to be <span class="accent">heard</span></h2>
+  <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg); display:none;" data-el="en">The first step<br>is to be <span class="accent">heard</span></h2>
   
   <p class="contact-quote reveal reveal-delay-2" data-el="gr">Δεν χρειάζεται να έχεις έναν συγκεκριμένο λόγο για να ξεκινήσεις. Αρκεί να νιώθεις πως κάτι σε απασχολεί.</p>
   <p class="contact-quote reveal reveal-delay-2" data-el="en" style="display:none">You don't need a specific reason to start. It is enough to feel that something is troubling you.</p>
@@ -1047,7 +1046,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.4746685848526!2d23.7483015!3d37.9904261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2cb0c19da21%3A0x86bd7127e366e7!2sLeof.%20Alexandras%20132%2C%20Athina%20114%2071!5e0!3m2!1sen!2sgr!4v1700000000000!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3144.33125672005!2d23.75084931210815!3d37.99268307180497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b0cecd91bb%3A0x675fcd6d8c832bb5!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEF0aGluYSAxMTQgNzE!5e0!3m2!1sen!2sgr!4v1700000000000!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
