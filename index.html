@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
-<meta name="description" content="Ψυχολόγος με εκπαίδευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου. Χωρίς επίκριση – με αποδοχή, κατανόηση και στήριξη.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
+<meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='68' font-family='serif' font-size='60' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -44,7 +44,8 @@ ul{list-style:none}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease-smooth)}
 .nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--c-border)}
 .nav-brand{cursor:pointer;display:flex;align-items:center;gap:.8rem}
-.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s}
+/* Transparent logo blending */
+.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply;}
 .nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-text);line-height:1.2}
 .nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-text-muted);margin-top:2px}
 .nav-right{display:flex;align-items:center;gap:2rem}
@@ -71,13 +72,14 @@ ul{list-style:none}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background-color:var(--c-bg)}
 .hero-bg{position:absolute;inset:0;z-index:1}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
-/* Flipped gradient for Desktop: dark behind text on the right */
+/* Shadow directly behind text on the right */
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
 .hero-text{max-width:620px;text-align:right}
 .hero-tag{font-size:.6rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1s 1.2s var(--ease-out-expo) forwards}
-.hero-h1{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.6rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
-.hero-h1 span.accent{color:var(--c-accent);font-style:normal}
+/* Reduced font size and applied italic for the main hero heading */
+.hero-h1{font-family:var(--font-display);font-size:clamp(1.5rem,3.2vw,2.4rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
+.hero-h1 span.accent{color:var(--c-accent);font-style:italic}
 .hero-sub{font-size:.85rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
 .hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
 .hero-btn:hover{background:var(--c-accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(196,130,110,.3)}
@@ -91,7 +93,7 @@ ul{list-style:none}
 
 /* MARQUEE */
 .marquee{padding:1.3rem 0;background:var(--c-burgundy);overflow:hidden}
-.marquee-track{display:flex;animation:marquee 30s linear infinite;width:max-content}
+.marquee-track{display:flex;animation:marquee 35s linear infinite;width:max-content}
 .marquee-item{font-family:var(--font-display);font-size:.8rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-bg);white-space:nowrap;padding:0 1.8rem;display:flex;align-items:center;gap:1.8rem}
 .marquee-item::after{content:'✦';font-size:.45rem;color:var(--c-accent-light)}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
@@ -106,8 +108,8 @@ ul{list-style:none}
 
 /* ABOUT */
 .about{background:var(--c-bg);overflow:hidden}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
-.about-image-wrap{position:relative}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.about-image-wrap{position:relative; position:sticky; top: 8rem;}
 .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
 .about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
 .about-image-wrap::after{content:'';position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;background:var(--c-accent-light);opacity:.08;border-radius:50%;z-index:0;transition:all .8s var(--ease-out-expo);animation:floatGlow 6s ease-in-out infinite}
@@ -125,6 +127,15 @@ ul{list-style:none}
 .about-text p:first-of-type::first-letter{font-family:var(--font-display);font-size:2.8rem;float:left;line-height:1;margin-right:.4rem;margin-top:.12rem;color:var(--c-accent);font-weight:400}
 .about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
+
+/* CV SECTION */
+.cv-section{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--c-border);color:var(--c-text-soft)}
+.cv-section h3{font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--c-accent);margin-bottom:2rem;line-height:1.4}
+.cv-section h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em}
+.cv-section ul{list-style:none;padding-left:0;margin-bottom:1.5rem}
+.cv-section ul li{position:relative;padding-left:1.5rem;font-size:.85rem;font-weight:300;line-height:1.7;margin-bottom:.8rem}
+.cv-section ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:.65rem;color:var(--c-accent-light)}
+.cv-section p{font-size:.85rem;font-weight:300;line-height:1.7;margin-bottom:.6rem}
 
 @keyframes floatGlow{0%,100%{transform:scale(1);opacity:.08}50%{transform:scale(1.3);opacity:.14}}
 
@@ -185,17 +196,17 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-/* Added slightly more padding to prevent cropping and used center center / cover */
 .online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://github.com/agelmet/pap/blob/main/onlinee.jpg?raw=true') center center / cover no-repeat; color:var(--c-bg);position:relative;overflow:hidden; padding: clamp(4.5rem, 12vw, 8rem) clamp(1.2rem, 5vw, 4rem);}
+.online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
 .online-tag::before{background:var(--c-accent-light)}
 .online-title{color:var(--c-bg)}
 .online-title .accent{color:var(--c-accent-light)}
 .online-text{font-size:.85rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
-.online-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.78rem;font-weight:300;color:rgba(250,248,245,.9)}
-.online-feature svg{width:16px;height:16px;stroke:var(--c-accent-light);flex-shrink:0}
+.online-features{display:grid;grid-template-columns:1fr;gap:.8rem; margin-bottom:1.5rem}
+.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:300;color:rgba(250,248,245,.9)}
+.online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
 .divider{position:relative;padding:clamp(3rem,8vw,5rem) clamp(1.5rem,5vw,4rem);overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
@@ -229,7 +240,7 @@ ul{list-style:none}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease-out-expo)}
 .faq-a-inner{padding:0 0 1.3rem;font-size:.82rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
-.faq-closing-quote{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3rem;grid-column:1/-1}
+.faq-closing-quote{font-family:var(--font-display);font-size:1.4rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;line-height:1.5}
 
 /* GLOSSARY */
 .glossary{background:var(--c-bg);border-top:1px solid var(--c-border)}
@@ -243,6 +254,8 @@ ul{list-style:none}
 .glossary-card h4{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--c-accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
 .glossary-card h4::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--c-accent-light);flex-shrink:0;opacity:.6}
 .glossary-card p{font-size:.78rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-text);line-height:1.5}
+.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.7rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em}
 
 /* REVIEWS */
 .reviews{background:var(--c-bg-alt);overflow:hidden}
@@ -300,7 +313,8 @@ ul{list-style:none}
 .contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
 .contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
-.contact-map iframe{width:100%;height:100%;border:0;filter:grayscale(1) invert(0.9) contrast(1.2);}
+/* Removed CSS filter so the map is full color */
+.contact-map iframe{width:100%;height:100%;border:0;}
 
 /* EMERGENCY */
 .emergency{background:var(--c-surface);padding:1.2rem clamp(1.2rem,5vw,4rem);text-align:center}
@@ -330,7 +344,7 @@ ul{list-style:none}
   .nav-hamburger{display:flex}
   .hero-content{padding:0 2rem}
   .about-grid{grid-template-columns:1fr;gap:2.5rem}
-  .about-image-wrap{max-width:450px;margin:0 auto}
+  .about-image-wrap{max-width:450px;margin:0 auto; position:static;}
   .philosophy-grid{grid-template-columns:1fr}
   .online-features{grid-template-columns:1fr;gap:1rem}
   .faq-grid{grid-template-columns:1fr;gap:2rem}
@@ -352,7 +366,7 @@ ul{list-style:none}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
   .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
-  .hero-h1{font-size:clamp(1.6rem,5.5vw,2.2rem);line-height:1.3;margin-bottom:1.2rem}
+  .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem}
   .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
   .hero-btn{font-size:.58rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
   .hero-scroll{bottom:1.2rem}
@@ -361,6 +375,8 @@ ul{list-style:none}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
   .about-text p{font-size:.82rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
+  .cv-section h3{font-size: 1.2rem;}
+  .cv-section h4{font-size: .9rem;}
   .roadmap-step{grid-template-columns:auto 1fr;gap:1.5rem}
   .roadmap-step:nth-child(odd) .roadmap-step-content{text-align:left}
   .roadmap-step:nth-child(odd) .roadmap-step-empty,.roadmap-step:nth-child(even) .roadmap-step-empty{display:none}
@@ -382,6 +398,7 @@ ul{list-style:none}
   .reviews-score{font-size:2.2rem}
   .contact-quote{font-size:1.05rem}
   .faq-q h3{font-size:.92rem}
+  .faq-closing-quote{font-size:1.1rem;}
   .marquee-item{font-size:.7rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
 }
@@ -423,8 +440,8 @@ ul{list-style:none}
     <a href="#faq" data-el="gr">Ερωτήσεις</a><a href="#faq" data-el="en" style="display:none">FAQ</a>
     <a href="#reviews" data-el="gr">Αξιολογήσεις</a><a href="#reviews" data-el="en" style="display:none">Reviews</a>
   </div>
-  <a href="#contact" class="nav-cta" data-el="gr">Κλείσε Ραντεβού</a>
-  <a href="#contact" class="nav-cta" data-el="en" style="display:none">Book Appointment</a>
+  <a href="#contact" class="nav-cta" data-el="gr">Επικοινωνία</a>
+  <a href="#contact" class="nav-cta" data-el="en" style="display:none">Contact</a>
   <button class="nav-lang" onclick="toggleLang()" id="langBtn">EN</button>
 </div>
 <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
@@ -454,11 +471,11 @@ ul{list-style:none}
   <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από μια άλλη οπτική.</span></h1>
   <h1 class="hero-h1" data-el="en" style="display:none">Whatever you're facing, it doesn't define you.<br><span class="accent">Together, we can look at it from a different perspective.</span></h1>
   
-  <p class="hero-sub" data-el="gr">Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου. Χωρίς επίκριση – με αποδοχή, κατανόηση και στήριξη. Μπορείς να έρθεις ακόμη και με το κατοικίδιό σου.</p>
-  <p class="hero-sub" data-el="en" style="display:none">A warm and safe space where you can be yourself. Without judgment – with acceptance, understanding, and support. You can even bring your pet.</p>
+  <p class="hero-sub" data-el="gr">Εδώ θα βρεις έναν ζεστό και ασφαλή χώρο, όπου μπορείς να είσαι ο εαυτός σου. Χωρίς επίκριση – με αποδοχή, κατανόηση και στήριξη σε όσα σε απασχολούν.</p>
+  <p class="hero-sub" data-el="en" style="display:none">Here you will find a warm and safe space, where you can be yourself. Without judgment – with acceptance, understanding, and support for whatever is on your mind.</p>
   
-  <a href="#contact" class="hero-btn" data-el="gr">Κλείσε Ραντεβού <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-  <a href="#contact" class="hero-btn" data-el="en" style="display:none">Book Appointment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="#contact" class="hero-btn" data-el="gr">ΕΠΙΚΟΙΝΩΝΙΑ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="#contact" class="hero-btn" data-el="en" style="display:none">CONTACT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 </div>
 </div>
 <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
@@ -504,7 +521,7 @@ ul{list-style:none}
 <div class="about-grid">
   <div class="about-image-wrap reveal">
     <div class="about-image">
-      <img src="https://github.com/agelmet/PAPASARANTOPOULOU/blob/main/ag1.jpg?raw=true" alt="Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου">
+      <img src="https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/429658487_368742572591904_3331754927442498288_n%20(1).jpg" alt="Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου">
       <div class="about-image-overlay"></div>
       <div class="about-image-caption"><span data-el="gr">Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου</span><span data-el="en" style="display:none">Angeliki-Eleftheria I. Papasarantopoulou</span></div>
     </div>
@@ -517,14 +534,91 @@ ul{list-style:none}
     <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">Angeliki-Eleftheria<br><span class="accent">I. Papasarantopoulou</span></h2>
 
     <div class="about-text reveal reveal-delay-2" data-el="gr">
-      <p>Είμαι αδειούχος Ψυχολόγος (Ε.Κ.Π.Α.) με εκπαίδευση στην Συμβουλευτική και την Ψυχοθεραπεία. Η δουλειά μου βασίζεται σε σύγχρονες προσεγγίσεις της Συστημικής, όπως η Αφηγηματική, η Διαλογική και η Θεραπεία Εστιασμένη στηΝ Λύση, καθώς και στην Εικαστική θεραπεία, προσαρμοσμένες στις ανάγκες του κάθε ανθρώπου. Έχω μεταπτυχιακή εκπαίδευση στην Εγκληματολογική Ψυχολογία (ΜΑ) και ολοκληρώνω τις σπουδές μου στην Ψυχιατροδικαστική (MSc) της Ιατρικής Σχολής Αθηνών. Μέσα από την εμπειρία μου, έχω έρθει σε επαφή με δύσκολες και απαιτητικές πλευρές της ανθρώπινης εμπειρίας, όπως το τραύμα και οι εξαρτήσεις. Η συνεργασία μου με τον Σύλλογο Συμπαραστάσεως Κρατουμένων «Ο Ονήσιμος», δίπλα σε αποφυλακισμένους και τις οικογένειές τους, έχει διαμορφώσει ουσιαστικά τον τρόπο που δουλεύω σήμερα. Παρακολουθώ διαρκώς σεμινάρια και μετεκπαιδεύσεις, ενώ είμαι μέλος επιστημονικών συλλόγων. Για μένα, η ψυχοθεραπεία είναι ένας χώρος αποδοχής για ό,τι σε απασχολεί χωρίς κριτική.</p>
+      <p>Είμαι αδειούχος Ψυχολόγος (Αριθμός Αδείας: 336629), απόφοιτη του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών, με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Η εκπαίδευσή μου βασίζεται σε σύγχρονες προσεγγίσεις της Συστημικής Θεραπείας, όπως η Αφηγηματική, η Διαλογική και η Θεραπεία Εστιασμένη στην Λύση, καθώς και στην Εικαστική θεραπεία, προσαρμοσμένες στις ανάγκες του κάθε ανθρώπου. Έχω μεταπτυχιακή εκπαίδευση στην Εγκληματολογική Ψυχολογία (ΜΑ) και ολοκληρώνω τις μεταπτυχιακές μου σπουδές στην Ψυχιατροδικαστική (MSc) της Ιατρικής Σχολής Αθηνών. Παρακολουθώ διαρκώς σεμινάρια, επιμορφώσεις και μετεκπαιδεύσεις, ενώ είμαι μέλος επιστημονικών συλλόγων. Μέσα από την εμπειρία μου, έχω έρθει σε επαφή με δύσκολες και απαιτητικές πλευρές του ψυχισμού, όπως το τραύμα, οι εξαρτήσεις, η περιθωριοποίηση και το στίγμα.</p>
     </div>
     <div class="about-text reveal reveal-delay-2" data-el="en" style="display:none">
-      <p>I am a licensed Psychologist (N.K.U.A.) with training in Counseling and Psychotherapy. My work is based on modern Systemic approaches, such as Narrative, Dialogical, and Solution-Focused Therapy, as well as Art Therapy, tailored to each person's needs. I hold a Master's degree in Criminological Psychology (MA) and am completing my studies in Forensic Psychiatry (MSc) at the Medical School of Athens. Through my experience, I have encountered difficult and demanding aspects of the human experience, such as trauma and addictions. My collaboration with the "Onisimos" Association for the Support of Prisoners, alongside released individuals and their families, has fundamentally shaped the way I work today. I continuously attend seminars and further training, and I am a member of scientific associations. For me, psychotherapy is a space of acceptance for whatever concerns you, without judgment.</p>
+      <p>I am a licensed Psychologist (License Number: 336629), a graduate of the National and Kapodistrian University of Athens, specializing in Counseling and Psychotherapy. My training is based on modern approaches to Systemic Therapy, such as Narrative, Dialogical, and Solution-Focused Therapy, as well as Art Therapy, all tailored to each person's unique needs. I hold a Master's degree in Criminological Psychology (MA) and I am currently completing my postgraduate studies in Forensic Psychiatry (MSc) at the Medical School of Athens. I continuously attend seminars, training programs, and further education, and I am a member of scientific associations. Through my experience, I have engaged with difficult and demanding aspects of the human psyche, such as trauma, addictions, marginalization, and stigma.</p>
     </div>
 
-    <div class="about-quote reveal reveal-delay-3" data-el="gr">«Για μένα, ο άνθρωπος δεν ταυτίζεται με αυτό που περνάει. ΣτηΝ θεραπεία, δεν υπάρχουν ταμπέλες – μόνο χώρος για να κατανοήσεις την εμπειρία σου και να βρεις τι σου ταιριάζει. Είμαι εδώ να σε συνοδεύσω σε αυτήΝ την διαδρομή, με σεβασμό στον δικό σου ρυθμό».</div>
-    <div class="about-quote reveal reveal-delay-3" data-el="en" style="display:none">"For me, a person is not defined by what they are going through. In therapy, there are no labels – only space to understand your experience and find what works for you. I am here to accompany you on this journey, respecting your own pace."</div>
+    <div class="about-quote reveal reveal-delay-3" data-el="gr">«Για μένα, ο άνθρωπος δεν ταυτίζεται με αυτό που περνάει. Στην θεραπεία, δεν υπάρχουν ταμπέλες – μόνο χώρος για να κατανοήσεις την εμπειρία σου και να βρεις λύσεις και νέες προοπτικές».</div>
+    <div class="about-quote reveal reveal-delay-3" data-el="en" style="display:none">"For me, a person is not identical to what they are going through. In therapy, there are no labels – only space to understand your experience and find solutions and new perspectives."</div>
+
+    <div class="cv-section reveal reveal-delay-4" data-el="gr">
+      <h3>Αν θέλεις να δεις περισσότερα για εμένα και την εκπαίδευσή μου: Βιογραφικό</h3>
+      
+      <h4>Σπουδές</h4>
+      <ul>
+          <li>Δίπλωμα Μεταπτυχιακών Σπουδών (ΔΜΣ) στην Ψυχιατροδικαστική, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Ιατρικής (2024 - Σήμερα)</li>
+          <li>Μετεκπαίδευση στην Ψυχοθεραπεία μέσω Τέχνης και στην Εικαστική Θεραπεία, Κέντρο Ψυχοθεραπείας και Τέχνης Συνώθηση (2023 - 2024)</li>
+          <li>Πιστοποίηση Εκπαίδευσης στην Δικαστική Ψυχολογία και στην Εγκληματολογία, Περί Ψυχής: Πιστοποιημένο Εκπαιδευτικό Ινστιτούτο από τη Διεθνή Ένωση Συμβουλευτικής (2023 - 2024)</li>
+          <li>Δίπλωμα Μεταπτυχιακών Σπουδών (ΔΜΣ) στην Εγκληματολογία (κατεύθυνση: Εγκληματολογική Ψυχολογία), Università degli Studi eCampus, Τμήμα Εγκληματολογίας (2021-2024)</li>
+          <li>Μετεκπαίδευση στις Μεταμοντέρνες Προσεγγίσεις στην Συστημική Ψυχοθεραπεία, Bienestar Κέντρο Εστιασμένης στη Λύση Ψυχοθεραπείας (2020-2022)</li>
+          <li>Πτυχίο Ψυχολογίας, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Ψυχολογίας (2016-2021)</li>
+          <li>Higher National Diploma (HND) in Counselling and Psychology, Mediterranean College, Τμήμα Ψυχολογίας (2018 - 2020)</li>
+          <li>Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης στην Ιατρική Ψυχολογία, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ιατρικής (2018 - 2019)</li>
+          <li>Πιστοποιητικό Επιμόρφωσης στην Διαχείριση Χωρισμού-Διαζύγιο Γονέων, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ψυχολογίας (2018 - 2019)</li>
+          <li>Πιστοποιητικό Επιμόρφωσης στην Ψυχοθεραπεία: Θεωρία και Πράξη, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ψυχολογίας (2017 - 2018)</li>
+      </ul>
+
+      <h4>Επαγγελματική εμπειρία</h4>
+      <ul>
+          <li>Ψυχολόγος, Ιδιωτικό γραφείο, Ελλάδα (2022 - Σήμερα)</li>
+          <li>Ψυχολόγος, Σύλλογος Συμπαραστάσεως Κρατουμένων "Ο ΟΝΗΣΙΜΟΣ", Ελλάδα (2021 - 2023)</li>
+      </ul>
+
+      <h4>Μέλος συλλόγων</h4>
+      <ul>
+          <li>Σύλλογος Ελλήνων Ψυχολόγων (Σ.Ε.Ψ.), Τακτικό Μέλος (ΑM: 3269)</li>
+          <li>Κέντρο Μελέτης του Εγκλήματος (ΚΕ.Μ.Ε.), Τακτικό Μέλος (ΑΜ: 437)</li>
+          <li>Ελληνική Ψυχιατροδικαστική Εταιρία (ΕΨΔΕ), Τακτικό Μέλος (ΑΜ: 303)</li>
+      </ul>
+
+      <h4>Ξένες γλώσσες</h4>
+      <ul>
+          <li>Αγγλικά</li>
+      </ul>
+
+      <p style="margin-top: 1.5rem; color: var(--c-accent);">Αριθμός αδείας: 336629/18-4-2022</p>
+    </div>
+    
+    <div class="cv-section reveal reveal-delay-4" data-el="en" style="display:none">
+      <h3>If you'd like to see more about me and my training: Resume</h3>
+      
+      <h4>Education</h4>
+      <ul>
+          <li>Master's Degree (MSc) in Forensic Psychiatry, National and Kapodistrian University of Athens, Medical School (2024 - Present)</li>
+          <li>Further Training in Art Psychotherapy and Art Therapy, Synothisi Center for Psychotherapy and Art (2023 - 2024)</li>
+          <li>Certification in Forensic Psychology and Criminology, Peri Psychis: Certified Educational Institute by the International Association for Counseling (2023 - 2024)</li>
+          <li>Master's Degree (MA) in Criminology (Specialization: Criminological Psychology), Università degli Studi eCampus, Faculty of Criminology (2021-2024)</li>
+          <li>Further Training in Postmodern Approaches to Systemic Psychotherapy, Bienestar Center for Solution-Focused Psychotherapy (2020-2022)</li>
+          <li>Bachelor's Degree in Psychology, National and Kapodistrian University of Athens, Department of Psychology (2016-2021)</li>
+          <li>Higher National Diploma (HND) in Counselling and Psychology, Mediterranean College, Department of Psychology (2018 - 2020)</li>
+          <li>Certificate of Specialized Training in Medical Psychology, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Medical School (2018 - 2019)</li>
+          <li>Certificate of Training in Separation Management-Parental Divorce, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Department of Psychology (2018 - 2019)</li>
+          <li>Certificate of Training in Psychotherapy: Theory and Practice, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Department of Psychology (2017 - 2018)</li>
+      </ul>
+
+      <h4>Professional Experience</h4>
+      <ul>
+          <li>Psychologist, Private Practice, Greece (2022 - Present)</li>
+          <li>Psychologist, Association for the Support of Prisoners "O ONISIMOS", Greece (2021 - 2023)</li>
+      </ul>
+
+      <h4>Memberships</h4>
+      <ul>
+          <li>Association of Greek Psychologists (SEPS), Regular Member (Reg. No: 3269)</li>
+          <li>Center for the Study of Crime (KEME), Regular Member (Reg. No: 437)</li>
+          <li>Hellenic Forensic Psychiatric Association (EpsDE), Regular Member (Reg. No: 303)</li>
+      </ul>
+
+      <h4>Foreign Languages</h4>
+      <ul>
+          <li>English</li>
+      </ul>
+
+      <p style="margin-top: 1.5rem; color: var(--c-accent);">License Number: 336629/18-4-2022</p>
+    </div>
+
   </div>
 </div>
 </div>
@@ -545,7 +639,7 @@ ul{list-style:none}
 <div class="service-info">
   <h3 data-el="gr">Άγχος, Ψυχοσωματικά Συμπτώματα, Κρίσεις Πανικού & Κατάθλιψη</h3>
   <h3 data-el="en" style="display:none">Anxiety, Psychosomatic Symptoms, Panic Attacks & Depression</h3>
-  <p data-el="gr">Αν βιώνεις άγχος, ψυχοσωματικά συμπτώματα, κρίσεις πανικού ή κατάθλιψη, μπορούμε να το δουλέψουμε μαζί με τρόπο που να σου ταιριάζει. Μέσα από τηΝ θεραπεία εντοπίζουμε τα συμπτώματα αλλά και τα βαθύτερα αίτια που τα τροφοδοτούν και τα συντηρούν, και βρίσκουμε λειτουργικά εργαλεία για να κατανοήσεις καλύτερα τον εαυτό σου και να διαχειριστείς ό,τι σε δυσκολεύει.</p>
+  <p data-el="gr">Αν βιώνεις άγχος, ψυχοσωματικά συμπτώματα, κρίσεις πανικού ή κατάθλιψη, μπορούμε να το δουλέψουμε μαζί με τρόπο που να σου ταιριάζει. Μέσα από την θεραπεία εντοπίζουμε τα συμπτώματα αλλά και τα βαθύτερα αίτια που τα τροφοδοτούν και τα συντηρούν, και βρίσκουμε λειτουργικά εργαλεία για να κατανοήσεις καλύτερα τον εαυτό σου και να διαχειριστείς ό,τι σε δυσκολεύει.</p>
   <p data-el="en" style="display:none">If you are experiencing anxiety, psychosomatic symptoms, panic attacks, or depression, we can work through it together in a way that suits you. Through therapy, we identify the symptoms and the deeper causes that feed and maintain them, finding functional tools so you can better understand yourself and manage what is troubling you.</p>
 </div>
 <div class="service-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></div>
@@ -554,10 +648,10 @@ ul{list-style:none}
 <div class="service-item reveal reveal-delay-1" onclick="toggleService(this)">
 <div class="service-num">02</div>
 <div class="service-info">
-  <h3 data-el="gr">Τραύμα, Συναισθήματα & Εξαρτήσεις</h3>
-  <h3 data-el="en" style="display:none">Trauma, Emotions & Addictions</h3>
-  <p data-el="gr">Είτε αφορά τραυματικές εμπειρίες, δυσκολίες στηΝ ρύθμιση των συναισθημάτων, μοτίβα που επαναλαμβάνονται στις σχέσεις ή ζητήματα που σχετίζονται με τη σχέση με το σώμα και τη διατροφή, είτε εξαρτήσεις (ναρκωτικά, αλκοόλ, τζόγος κ.ά.), η θεραπεία προσφέρει έναν ασφαλή χώρο για να τα επεξεργαστείς, χωρίς καμία κριτική. Μαζί, δουλεύουμε με τρόπο που σέβεται τον ρυθμό σου, ώστε να κατανοήσεις καλύτερα αυτό που σου συμβαίνει και να βρεις τρόπους να το διαχειρίζεσαι, χωρίς να σε καθορίζει.</p>
-  <p data-el="en" style="display:none">Whether it concerns traumatic experiences, difficulties in emotional regulation, repeating relationship patterns, body image and eating issues, or addictions (drugs, alcohol, gambling, etc.), therapy offers a safe space to process them without judgment. Together, we work in a way that respects your pace, helping you understand what is happening and finding ways to manage it without letting it define you.</p>
+  <h3 data-el="gr">Τραύμα, Συναισθήματα, Σχέση με το Σώμα & Εξαρτήσεις</h3>
+  <h3 data-el="en" style="display:none">Trauma, Emotions, Relationship with the Body & Addictions</h3>
+  <p data-el="gr">Αν βιώνεις κάτι δύσκολο, όπως τραυματικές εμπειρίες, δυσκολίες στην ρύθμιση των συναισθημάτων, μοτίβα που επαναλαμβάνονται στις σχέσεις, ζητήματα με το σώμα και την διατροφή ή εξαρτήσεις (ναρκωτικά, αλκοόλ, τζόγος, internet κ.ά.), η θεραπεία προσφέρει έναν ασφαλή χώρο για να τα επεξεργαστείς. Στόχος είναι να κατανοήσεις καλύτερα αυτό που σου συμβαίνει, τα αίτιά του και πώς αυτό συντηρείται στην ζωή σου, βρίσκοντας τρόπους να το διαχειρίζεσαι, χωρίς να σε καθορίζει.</p>
+  <p data-el="en" style="display:none">If you are going through something difficult, such as traumatic experiences, difficulties in emotion regulation, repeating relationship patterns, body image and eating issues, or addictions (drugs, alcohol, gambling, internet, etc.), therapy offers a safe space to process them. The goal is to better understand what is happening to you, its causes, and how it is maintained in your life, finding ways to manage it without letting it define you.</p>
 </div>
 <div class="service-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></div>
 </div>
@@ -567,7 +661,7 @@ ul{list-style:none}
 <div class="service-info">
   <h3 data-el="gr">Σχέσεις, Εφηβεία, Οικογένεια & Γονεϊκότητα</h3>
   <h3 data-el="en" style="display:none">Relationships, Adolescence, Family & Parenting</h3>
-  <p data-el="gr">Είτε αφορά τηΝ σχέση με τον/την σύντροφο, την οικογένεια ή το παιδί, η θεραπεία προσφέρει έναν χώρο για να δουλέψουμε όσα δυσκολεύουν την επικοινωνία και τη σύνδεση. Με εμπειρία στηΝ διαχείριση σχέσεων και οικογενειακών δυναμικών, υποστηρίζω γονείς, ζευγάρια και εφήβους να κατανοήσουν καλύτερα ο ένας τον άλλον και να βρουν πιο λειτουργικούς τρόπους να σχετίζονται, με περισσότερη κατανόηση.</p>
+  <p data-el="gr">Είτε αφορά την σχέση με τον/την σύντροφο, την οικογένεια ή το παιδί, η θεραπεία προσφέρει έναν χώρο για να δουλέψουμε όσα δυσκολεύουν την επικοινωνία και τη σύνδεση. Με εμπειρία στην διαχείριση σχέσεων και οικογενειακών δυναμικών, υποστηρίζω γονείς, ζευγάρια και εφήβους να κατανοήσουν καλύτερα ο ένας τον άλλον και να βρουν πιο λειτουργικούς τρόπους να σχετίζονται, με περισσότερη κατανόηση.</p>
   <p data-el="en" style="display:none">Whether it's your relationship with your partner, your family, or your child, therapy provides a space to work through what hinders communication and connection. With experience in managing relationships and family dynamics, I support parents, couples, and adolescents in better understanding each other and finding more functional ways to relate with greater empathy.</p>
 </div>
 <div class="service-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></div>
@@ -601,40 +695,37 @@ ul{list-style:none}
 
 <section class="section philosophy" id="philosophy">
 <div class="section-inner">
-<div class="section-tag reveal" data-el="gr">Η Προσέγγισή μου</div>
-<div class="section-tag reveal" data-el="en" style="display:none">My Approach</div>
-
-<h2 class="section-title reveal reveal-delay-1" data-el="gr">Η Προσέγγισή μου<br>στη <span class="accent">Θεραπεία</span></h2>
+<h2 class="section-title reveal reveal-delay-1" data-el="gr">Η Προσέγγισή μου<br>στην <span class="accent">θεραπεία</span></h2>
 <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">My Approach<br>to <span class="accent">Therapy</span></h2>
 
 <div class="philosophy-grid">
 <div class="phil-card reveal reveal-delay-1">
-  <div class="phil-num">01</div>
+  <div class="phil-num">1</div>
   <h3 data-el="gr">Αφηγηματική & Δημιουργική Οπτική</h3>
   <h3 data-el="en" style="display:none">Narrative & Creative Perspective</h3>
-  <p data-el="gr">Δεν είσαι η διάγνωσή σου. Δίνουμε χώρο στηΝ ιστορία σου, όχι μόνο μέσα από τις λέξεις, αλλά και μέσα από τρόπους που σου ταιριάζουν. Μαζί, ανακαλύπτουμε νέες οπτικές και δυνατότητες που ίσως δεν είχες δει μέχρι τώρα.</p>
-  <p data-el="en" style="display:none">You are not your diagnosis. We make space for your story, not just through words, but in ways that suit you. Together, we discover new perspectives and possibilities you might not have seen before.</p>
+  <p data-el="gr">Δεν είσαι η διάγνωσή σου. Δίνουμε χώρο στην ιστορία σου, όχι μόνο μέσα από την συζήτηση, αλλά και μέσα από τρόπους έκφρασης που σου ταιριάζουν. Μαζί μπορούμε να δούμε πλευρές και δυνατότητες που ίσως δεν είχες δει μέχρι τώρα.</p>
+  <p data-el="en" style="display:none">You are not your diagnosis. We make space for your story, not just through conversation, but through forms of expression that suit you. Together we can uncover sides and possibilities you may not have seen until now.</p>
 </div>
 <div class="phil-card reveal reveal-delay-2">
-  <div class="phil-num">02</div>
+  <div class="phil-num">2</div>
   <h3 data-el="gr">Βαθιά Εξειδίκευση</h3>
   <h3 data-el="en" style="display:none">Deep Specialisation</h3>
-  <p data-el="gr">Η εκπαίδευσή μου μου έχει δώσει τη δυνατότητα να έρχομαι σε επαφή με σύνθετες και απαιτητικές πλευρές της ανθρώπινης εμπειρίας. ΣτηΝ θεραπεία, αυτό μεταφράζεται σε έναν χώρο όπου μπορείς να φέρεις ό,τι σε απασχολεί, με ασφάλεια και χωρίς φόβο.</p>
-  <p data-el="en" style="display:none">My training has allowed me to encounter complex and demanding aspects of the human experience. In therapy, this translates into a space where you can safely bring whatever is on your mind, without fear.</p>
+  <p data-el="gr">Η ουσιαστική επαφή μου με σύνθετες και απαιτητικές πλευρές της ανθρώπινης εμπειρίας, καθιστά την θεραπεία έναν χώρο ελευθερίας, όπου μπορείς να εκφράσεις ό,τι σε απασχολεί, χωρίς φόβο.</p>
+  <p data-el="en" style="display:none">My substantial contact with complex and demanding aspects of the human experience makes therapy a space of freedom, where you can express whatever concerns you without fear.</p>
 </div>
 <div class="phil-card reveal reveal-delay-3">
-  <div class="phil-num">03</div>
+  <div class="phil-num">3</div>
   <h3 data-el="gr">Χωρίς Επίκριση</h3>
   <h3 data-el="en" style="display:none">Without Judgment</h3>
-  <p data-el="gr">Η εμπειρία μου με ανθρώπους που έχουν βιώσει το περιθώριο, έχει διαμορφώσει βαθιά τον τρόπο που δουλεύω. Στο χώρο αυτό, μπορείς να είσαι 100% όπως είσαι – χωρίς κριτική, με απόλυτη αποδοχή και σεβασμό.</p>
-  <p data-el="en" style="display:none">My experience with marginalized individuals has deeply shaped the way I work. In this space, you can be 100% yourself – without judgment, with absolute acceptance and respect.</p>
+  <p data-el="gr">Μπορείς να είσαι 100% ο εαυτός σου χωρίς κριτική, με απόλυτη αποδοχή και σεβασμό.</p>
+  <p data-el="en" style="display:none">You can be 100% yourself without judgment, with absolute acceptance and respect.</p>
 </div>
 <div class="phil-card reveal reveal-delay-4">
-  <div class="phil-num">04</div>
-  <h3 data-el="gr">Ένας Χώρος όπου Μπορείς να Έρθεις Μαζί με το Κατοικίδιό σου</h3>
-  <h3 data-el="en" style="display:none">A Space Where You Can Bring Your Pet</h3>
-  <p data-el="gr">Αν το κατοικίδιό σου σε βοηθά να νιώθεις πιο άνετα, είναι ευπρόσδεκτο να σε συνοδεύσει. Υπάρχει πάντα μέριμνα και για εκείνο (νερό και λιχουδιές), ώστε να νιώθετε όμορφα και οι δύο. Για μένα, η ασφάλεια ξεκινά από το να μπορείς να είσαι ο εαυτός σου.</p>
-  <p data-el="en" style="display:none">If your pet helps you feel more comfortable, they are welcome to join you. There is always care for them too (water and treats), so both of you can feel good. For me, safety starts with being able to be yourself.</p>
+  <div class="phil-num">4</div>
+  <h3 data-el="gr">Έλα ΜΑΖΙ με το αγαπημένο σου κατοικίδιο</h3>
+  <h3 data-el="en" style="display:none">Come TOGETHER with your favorite pet</h3>
+  <p data-el="gr">Το κατοικίδιό σου είναι ευπρόσδεκτο να έρθει μαζί σου. Υπάρχει πάντα μέριμνα και για εκείνο (νερό και λιχουδιές), ώστε να νιώθετε όμορφα και οι δύο. Η ασφάλεια ξεκινά, όταν μπορείς να είσαι ο εαυτός σου.</p>
+  <p data-el="en" style="display:none">Your pet is welcome to join you. There is always care for them too (water and treats), so both of you can feel good. Safety begins when you can truly be yourself.</p>
 </div>
 </div>
 </div>
@@ -642,26 +733,24 @@ ul{list-style:none}
 
 <section class="section roadmap">
 <div class="section-inner">
-<div class="section-tag reveal" data-el="gr">Η Διαδικασία</div>
-<div class="section-tag reveal" data-el="en" style="display:none">The Process</div>
 
 <h2 class="section-title reveal reveal-delay-1" data-el="gr">Τι να <span class="accent">Περιμένεις</span></h2>
 <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">What to <span class="accent">Expect</span></h2>
 
-<p class="roadmap-subtitle reveal reveal-delay-2" data-el="gr">Αν δεν έχεις ξαναπάει σε ψυχολόγο, είναι φυσικό να υπάρχουν απορίες ή δισταγμός. Εδώ, τα πράγματα γίνονται με απλότητα και στον δικό σου ρυθμό.</p>
-<p class="roadmap-subtitle reveal reveal-delay-2" data-el="en" style="display:none">If you haven't been to a psychologist before, it is normal to have questions or hesitate. Here, things are simple and go at your own pace.</p>
+<p class="roadmap-subtitle reveal reveal-delay-2" data-el="gr">Αν δεν έχεις ξαναπάει σε ψυχολόγο, είναι φυσικό να υπάρχουν απορίες ή δισταγμός. Εδώ, τα πράγματα γίνονται με απλότητα.</p>
+<p class="roadmap-subtitle reveal reveal-delay-2" data-el="en" style="display:none">If you haven't been to a psychologist before, it is normal to have questions or hesitate. Here, things are done simply.</p>
 
 <div class="roadmap-steps">
 
 <div class="roadmap-step reveal">
   <div class="roadmap-step-content">
     <h3 data-el="gr">Η Πρώτη Επικοινωνία</h3>
-    <h3 data-el="en" style="display:none">First Contact</h3>
-    <p data-el="gr">Επικοινωνούμε τηλεφωνικά για να κλείσουμε το ραντεβού και να μοιραστείς, αν θέλεις, τι σε απασχολεί.</p>
-    <p data-el="en" style="display:none">We speak on the phone to book the appointment and for you to share, if you'd like, what's on your mind.</p>
+    <h3 data-el="en" style="display:none">The First Contact</h3>
+    <p data-el="gr">Επικοινωνούμε τηλεφωνικά ή μέσω doctoranytime για να κλείσουμε το ραντεβού και να μοιραστείς, αν θέλεις, τι σε απασχολεί.</p>
+    <p data-el="en" style="display:none">We communicate by phone or via doctoranytime to book the appointment and for you to share, if you'd like, what's on your mind.</p>
   </div>
   <div class="roadmap-step-center">
-    <div class="roadmap-step-num">01</div>
+    <div class="roadmap-step-num">1</div>
   </div>
   <div class="roadmap-step-empty"></div>
 </div>
@@ -679,7 +768,7 @@ ul{list-style:none}
 <div class="roadmap-step reveal reveal-delay-1">
   <div class="roadmap-step-empty"></div>
   <div class="roadmap-step-center">
-    <div class="roadmap-step-num">02</div>
+    <div class="roadmap-step-num">2</div>
   </div>
   <div class="roadmap-step-content">
     <h3 data-el="gr">Η Πρώτη Συνεδρία</h3>
@@ -703,11 +792,11 @@ ul{list-style:none}
   <div class="roadmap-step-content">
     <h3 data-el="gr">Χτίζοντας το Θεραπευτικό Πλάνο</h3>
     <h3 data-el="en" style="display:none">Building the Therapeutic Plan</h3>
-    <p data-el="gr">Μαζί διαμορφώνουμε τον τρόπο που θα δουλέψουμε και την συχνότητα των συνεδριών, με βάση τον δικό σου ρυθμό και τις ανάγκες σου.</p>
-    <p data-el="en" style="display:none">Together we shape how we will work and the frequency of our sessions, based on your pace and needs.</p>
+    <p data-el="gr">Μαζί διαμορφώνουμε τον τρόπο που θα δουλέψουμε και την συχνότητα των συνεδριών, με βάση τις ανάγκες σου.</p>
+    <p data-el="en" style="display:none">Together we shape how we will work and the frequency of our sessions, based on your needs.</p>
   </div>
   <div class="roadmap-step-center">
-    <div class="roadmap-step-num">03</div>
+    <div class="roadmap-step-num">3</div>
   </div>
   <div class="roadmap-step-empty"></div>
 </div>
@@ -719,20 +808,23 @@ ul{list-style:none}
 <section class="section online">
 <div class="section-inner">
 <div class="online-grid">
-  <div class="section-tag online-tag reveal" data-el="gr">Συνεδρίες Εξ Αποστάσεως</div>
-  <div class="section-tag online-tag reveal" data-el="en" style="display:none">Remote Sessions</div>
   
-  <h2 class="section-title online-title reveal reveal-delay-1" data-el="gr">Άνεση από τον Χώρο σου | Ευέλικτα Ραντεβού |<br><span class="accent">Χωρίς Περιορισμούς</span></h2>
-  <h2 class="section-title online-title reveal reveal-delay-1" data-el="en" style="display:none">Comfort from Your Space | Flexible Appointments |<br><span class="accent">Without Limits</span></h2>
+  <h2 class="section-title online-title reveal reveal-delay-1" data-el="gr">Συνεδρίες Εξ Αποστάσεως (Online)<br><span class="accent" style="font-size: clamp(1.1rem,2vw,1.4rem); line-height: 1.6; display:block; margin-top:0.5rem">Άνεση από τον Χώρο σου | Χωρίς Περιορισμούς</span></h2>
+  <h2 class="section-title online-title reveal reveal-delay-1" data-el="en" style="display:none">Remote Sessions (Online)<br><span class="accent" style="font-size: clamp(1.1rem,2vw,1.4rem); line-height: 1.6; display:block; margin-top:0.5rem">Comfort from Your Space | Without Limits</span></h2>
   
-  <p class="online-text reveal reveal-delay-2" data-el="gr">Αν μένεις εκτός Αθηνών, αν ο χρόνος σου είναι περιορισμένος ή αν νιώθεις πιο άνετα στον δικό σου χώρο, υπάρχει η δυνατότητα να πραγματοποιούνται συνεδρίες διαδικτυακά. Η θεραπεία προσαρμόζεται στις ανάγκες σου, διατηρώντας την ίδια φροντίδα, παρουσία και σύνδεση.</p>
-  <p class="online-text reveal reveal-delay-2" data-el="en" style="display:none">If you live outside Athens, if your time is limited, or if you feel more comfortable in your own space, sessions can be conducted online. Therapy adapts to your needs, maintaining the same care, presence, and connection.</p>
-  
-  <div class="online-features reveal reveal-delay-3">
-    <div class="online-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-el="gr">Με ασφάλεια και εχεμύθεια</span><span data-el="en" style="display:none">Safely and confidentially</span></div>
-    <div class="online-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-el="gr">Από τον χώρο σου</span><span data-el="en" style="display:none">From your space</span></div>
-    <div class="online-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-el="gr">Με ευελιξία στον προγραμματισμό</span><span data-el="en" style="display:none">With flexible scheduling</span></div>
+  <div class="online-features reveal reveal-delay-3" style="display:flex; flex-direction:column; gap:0.6rem;">
+    <div class="online-feature" data-el="gr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Αν μένεις εκτός Αθηνών</span></div>
+    <div class="online-feature" data-el="gr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Αν ο χρόνος σου είναι περιορισμένος</span></div>
+    <div class="online-feature" data-el="gr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Αν απλώς νιώθεις πιο άνετα στον δικό σου χώρο</span></div>
+    
+    <div class="online-feature" data-el="en" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>If you live outside Athens</span></div>
+    <div class="online-feature" data-el="en" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>If your time is limited</span></div>
+    <div class="online-feature" data-el="en" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>If you simply feel more comfortable in your own space</span></div>
   </div>
+
+  <p class="online-text reveal reveal-delay-2" data-el="gr">Υπάρχει η δυνατότητα να πραγματοποιούνται οι συνεδρίες διαδικτυακά. Η θεραπεία προσαρμόζεται στις ανάγκες σου, διατηρώντας την ίδια φροντίδα, παρουσία και σύνδεση, με ασφάλεια και ευελιξία στον προγραμματισμό.</p>
+  <p class="online-text reveal reveal-delay-2" data-el="en" style="display:none">There is the option to conduct sessions online. Therapy adapts to your needs, maintaining the same care, presence, and connection, with safety and flexibility in scheduling.</p>
+
 </div>
 </div>
 </section>
@@ -773,10 +865,9 @@ ul{list-style:none}
 <div class="section-inner">
 <div class="faq-grid">
 <div class="faq-intro">
-  <div class="section-tag reveal" data-el="gr">Χρήσιμες Πληροφορίες</div>
-  <div class="section-tag reveal" data-el="en" style="display:none">Useful Information</div>
   <h2 class="section-title reveal reveal-delay-1" data-el="gr">Συχνές<br><span class="accent">Ερωτήσεις</span></h2>
   <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">Frequently<br><span class="accent">Asked Questions</span></h2>
+  
   <p class="reveal reveal-delay-2" data-el="gr">Αν σκέφτεσαι να ξεκινήσεις θεραπεία, είναι φυσικό να έχεις απορίες. Εδώ θα βρεις απαντήσεις σε μερικά βασικά ερωτήματα.</p>
   <p class="reveal reveal-delay-2" data-el="en" style="display:none">If you are thinking of starting therapy, it is natural to have questions. Here you will find answers to some basic questions.</p>
 </div>
@@ -788,7 +879,7 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">What can I expect from the first session?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Η πρώτη συνεδρία είναι μια ευκαιρία να γνωριστούμε και να δούμε τι σε απασχολεί. Δεν χρειάζεται να τα πεις όλα από την αρχή – προχωράμε με τον δικό σου ρυθμό.</div><div class="faq-a-inner" data-el="en" style="display:none">The first session is an opportunity to meet and see what is bothering you. You don't have to say everything from the start – we proceed at your own pace.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Η πρώτη συνεδρία είναι μια ευκαιρία να γνωριστούμε και να δούμε τι σε απασχολεί. Δεν χρειάζεται να τα πεις όλα από την αρχή – προχωράμε με τον δικό σου ρυθμό.</div><div class="faq-a-inner" data-el="en" style="display:none">The first session is an opportunity to get to know each other and see what is bothering you. You don't have to say everything from the start – we proceed at your own pace.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-1" onclick="toggleFaq(this)">
@@ -797,7 +888,7 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">How long does therapy usually last?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Η διάρκεια της θεραπείας εξαρτάται από το αίτημα και τις ανάγκες σου. Σε κάποιες περιπτώσεις, όπως το άγχος ή οι κρίσεις πανικού, μπορεί να υπάρξει ανακούφιση σχετικά σύντομα. Σε πιο σύνθετα ζητήματα, όπως το τραύμα, δίνεται ο χρόνος που χρειάζεται πάντα με σεβασμό στον δικό σου ρυθμό.</div><div class="faq-a-inner" data-el="en" style="display:none">The duration depends on your request and needs. In some cases, like anxiety or panic attacks, relief can come relatively soon. For more complex issues like trauma, we take the time needed, always respecting your pace.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Η διάρκεια της θεραπείας εξαρτάται από το αίτημα και τις ανάγκες σου. Σε κάποιες περιπτώσεις μπορεί να υπάρξει ανακούφιση σχετικά σύντομα, ενώ πιο σύνθετα ζητήματα, χρειάζονται περισσότερο χρόνο.</div><div class="faq-a-inner" data-el="en" style="display:none">The duration of therapy depends on your request and needs. In some cases, relief can come relatively quickly, while more complex issues require more time.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-2" onclick="toggleFaq(this)">
@@ -806,7 +897,7 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">How does a pet-friendly office work?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Μπορείς να έρθεις μαζί με το κατοικίδιό σου, αν αυτό σε βοηθά να νιώθεις πιο άνετα. Η παρουσία του συχνά βοηθά στηΝ μείωση του άγχους και κάνει τη διαδικασία πιο οικεία και υποστηρικτική. Ο χώρος είναι διαμορφωμένος ώστε να είναι ασφαλής και για εκείνο απλώς ενημέρωσέ με όταν κλείνεις το ραντεβού.</div><div class="faq-a-inner" data-el="en" style="display:none">You can bring your pet if it helps you feel more comfortable. Their presence often reduces anxiety and makes the process feel more familiar and supportive. The space is safe for them – just let me know when booking.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Μπορείς να έρθεις μαζί με το κατοικίδιό σου. Η παρουσία του, συχνά, βοηθά στην μείωση του άγχους και κάνει την διαδικασία πιο οικεία και υποστηρικτική. Ο χώρος είναι διαμορφωμένος ώστε να είναι ασφαλής και για εκείνο. Απλώς ενημέρωσέ με όταν κλείνεις το ραντεβού.</div><div class="faq-a-inner" data-el="en" style="display:none">You can come along with your pet. Their presence often helps reduce anxiety and makes the process more familiar and supportive. The space is set up to be safe for them as well. Just let me know when you book your appointment.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-3" onclick="toggleFaq(this)">
@@ -815,16 +906,16 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">Is there an option for online sessions?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Ναι, υπάρχει η δυνατότητα για online συνεδρίες. Μπορούμε να δουλέψουμε και διαδικτυακά, με σεβασμό στον ρυθμό και τις ανάγκες σου. Η διαδικασία παραμένει ουσιαστική και υποστηρικτική, όπως και στηΝ δια ζώσης θεραπεία.</div><div class="faq-a-inner" data-el="en" style="display:none">Yes, online sessions are available. We can work digitally, respecting your pace and needs. The process remains meaningful and supportive, just like in-person therapy.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Ναι, υπάρχει η δυνατότητα για online συνεδρίες. Η διαδικασία παραμένει ουσιαστική και υποστηρικτική, όπως και στην δια ζώσης θεραπεία.</div><div class="faq-a-inner" data-el="en" style="display:none">Yes, there is the possibility for online sessions. The process remains meaningful and supportive, just as in face-to-face therapy.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-4" onclick="toggleFaq(this)">
 <div class="faq-q">
-  <h3 data-el="gr">Μπορώ να φέρω στηΝ θεραπεία οτιδήποτε με απασχολεί;</h3>
-  <h3 data-el="en" style="display:none">Can I bring whatever is on my mind to therapy?</h3>
+  <h3 data-el="gr">Μπορώ να μιλήσω στην θεραπεία για οτιδήποτε με απασχολεί;</h3>
+  <h3 data-el="en" style="display:none">Can I talk in therapy about anything that concerns me?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Μπορείς να φέρεις ό,τι σε απασχολεί, χωρίς φόβο ή ντροπή. Εδώ υπάρχει χώρος να ειπωθούν και τα πιο δύσκολα, με σεβασμό και χωρίς κριτική.</div><div class="faq-a-inner" data-el="en" style="display:none">You can bring whatever concerns you, without fear or shame. There is space here to say even the hardest things, with respect and without judgment.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Ναι, μπορείς να μιλήσεις για ό,τι σε απασχολεί, χωρίς άγχος, φόβο ή ντροπή. Εδώ υπάρχει χώρος να ειπωθούν και τα πιο δύσκολα, σε ένα πλαίσιο σεβασμού και κατανόησης.</div><div class="faq-a-inner" data-el="en" style="display:none">Yes, you can talk about whatever concerns you, without stress, fear, or shame. There is space here to say even the hardest things, within a framework of respect and understanding.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-1" onclick="toggleFaq(this)">
@@ -833,7 +924,7 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">What if I don't know what to say?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Δεν χρειάζεται να ξέρεις τι να πεις ή από πού να ξεκινήσεις. Διαμορφώνουμε μαζί τη συζήτηση, με τον δικό σου ρυθμό.</div><div class="faq-a-inner" data-el="en" style="display:none">You don't need to know what to say or where to start. We shape the conversation together, at your own pace.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Δεν χρειάζεται να ξέρεις τι να πεις ή από πού να ξεκινήσεις. Μαζί διαμορφώνουμε την συζήτηση.</div><div class="faq-a-inner" data-el="en" style="display:none">You don't need to know what to say or where to start. We shape the conversation together.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-2" onclick="toggleFaq(this)">
@@ -842,7 +933,7 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">How often do sessions take place?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Συνήθως οι συνεδρίες γίνονται μία φορά την εβδομάδα, αλλά αυτό προσαρμόζεται ανάλογα με τις ανάγκες σου.</div><div class="faq-a-inner" data-el="en" style="display:none">Sessions usually take place once a week, but this is adjusted according to your needs.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Συνήθως οι συνεδρίες γίνονται μία φορά την εβδομάδα, αλλά αυτό προσαρμόζεται ανάλογα με τις δικές σου ανάγκες.</div><div class="faq-a-inner" data-el="en" style="display:none">Usually, sessions take place once a week, but this is adjusted according to your own needs.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-3" onclick="toggleFaq(this)">
@@ -851,21 +942,30 @@ ul{list-style:none}
   <h3 data-el="en" style="display:none">Is what we discuss confidential?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Ναι, η θεραπευτική διαδικασία διέπεται από το απόρρητο. Όσα μοιράζεσαι παραμένουν σε ένα πλαίσιο εχεμύθειας και σεβασμού.</div><div class="faq-a-inner" data-el="en" style="display:none">Yes, the therapeutic process is bound by confidentiality. What you share remains within a framework of privacy and respect.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Απολύτως εμπιστευτικά. Η θεραπευτική διαδικασία διέπεται από το απόρρητο. Όσα μοιράζεσαι παραμένουν σε ένα πλαίσιο πλήρους εμπιστευτικότητας.</div><div class="faq-a-inner" data-el="en" style="display:none">Absolutely confidential. The therapeutic process is governed by confidentiality. What you share remains within a framework of complete privacy.</div></div>
 </div>
 
 <div class="faq-item reveal reveal-delay-4" onclick="toggleFaq(this)">
+<div class="faq-q">
+  <h3 data-el="gr">Μπορεί να γίνει άρση του απορρήτου;</h3>
+  <h3 data-el="en" style="display:none">Can confidentiality be breached?</h3>
+  <div class="faq-q-icon">+</div>
+</div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Η μόνη περίπτωση που όχι απλώς επιτρέπεται – αλλά επιβάλλεται η άρση του απορρήτου, είναι αν υπάρχει κίνδυνος εαυτού ή άλλου, δηλαδή αν εκφράσεις σοβαρά την επιθυμία να βλάψεις εσένα ή κάποιο άλλο πρόσωπο. Σε μια τέτοια περίπτωση, η ενημέρωση κάποιου οικείου προσώπου, δρα προστατευτικά.</div><div class="faq-a-inner" data-el="en" style="display:none">The only case where breaking confidentiality is not just allowed – but required, is if there is a risk to yourself or others, meaning if you express a serious desire to harm yourself or someone else. In such a case, informing a close person acts preventatively.</div></div>
+</div>
+
+<div class="faq-item reveal reveal-delay-1" onclick="toggleFaq(this)">
 <div class="faq-q">
   <h3 data-el="gr">Πώς μπορώ να κλείσω ραντεβού;</h3>
   <h3 data-el="en" style="display:none">How can I book an appointment?</h3>
   <div class="faq-q-icon">+</div>
 </div>
-<div class="faq-a"><div class="faq-a-inner" data-el="gr">Μπορείς να επικοινωνήσεις μαζί μου τηλεφωνικά για να κανονίσουμε την πρώτη συνάντηση. Αν νιώθεις δισταγμό, μπορείς απλώς να στείλεις ένα μήνυμα και το προχωράμε μαζί.</div><div class="faq-a-inner" data-el="en" style="display:none">You can contact me by phone to arrange our first meeting. If you feel hesitant, you can simply send a message and we will take it from there.</div></div>
+<div class="faq-a"><div class="faq-a-inner" data-el="gr">Μπορείς να επικοινωνήσεις μαζί μου τηλεφωνικά για να κανονίσουμε την πρώτη συνάντηση, ή μέσω doctoranytime.</div><div class="faq-a-inner" data-el="en" style="display:none">You can contact me by phone to arrange our first meeting, or via doctoranytime.</div></div>
 </div>
 
 </div>
-<div class="faq-closing-quote reveal reveal-delay-1" data-el="gr">«Δεν χρειάζεται να τα έχεις ξεκαθαρίσει όλα για να ξεκινήσεις».</div>
-<div class="faq-closing-quote reveal reveal-delay-1" data-el="en" style="display:none">"You don't need to have everything figured out to start."</div>
+<div class="faq-closing-quote reveal reveal-delay-1" data-el="gr">«Μερικές φορές, το πιο γενναίο πράγμα είναι να μιλήσεις. Και η θεραπεία αρχίζει όταν μιλάς σε κάποιον που σε ακούει πραγματικά».</div>
+<div class="faq-closing-quote reveal reveal-delay-1" data-el="en" style="display:none">"Sometimes, the bravest thing is to speak. And therapy begins when you talk to someone who truly listens to you."</div>
 </div>
 </div>
 </section>
@@ -873,61 +973,61 @@ ul{list-style:none}
 <section class="section glossary">
 <div class="section-inner">
 <div class="glossary-intro">
-  <div class="section-tag reveal" data-el="gr">Το «Λεξικό» της Ψυχοθεραπείας</div>
-  <div class="section-tag reveal" data-el="en" style="display:none">The Psychotherapy "Dictionary"</div>
-  
-  <h2 class="section-title reveal reveal-delay-1" data-el="gr">Τι σημαίνουν όλα αυτά<br>στηΝ <span class="accent">πράξη</span></h2>
+  <h2 class="section-title reveal reveal-delay-1" data-el="gr">Τι σημαίνουν όλα αυτά<br>στην <span class="accent">πράξη</span></h2>
   <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">What this means<br>in <span class="accent">practice</span></h2>
   
-  <p class="reveal reveal-delay-2" data-el="gr">Οι όροι μπορεί να ακούγονται περίπλοκοι, αλλά στηΝ θεραπεία, σημασία έχει το πώς το βιώνεις εσύ.</p>
-  <p class="reveal reveal-delay-2" data-el="en" style="display:none">The terms might sound complicated, but in therapy, what matters is how you experience it.</p>
+  <p class="reveal reveal-delay-2" data-el="gr">Οι όροι μπορεί να ακούγονται περίπλοκοι, όμως είναι πιο απλοί απ' όσο φαίνονται.</p>
+  <p class="reveal reveal-delay-2" data-el="en" style="display:none">The terms might sound complicated, but they are simpler than they appear.</p>
 </div>
 
 <div class="glossary-grid">
 
   <div class="glossary-card reveal">
-    <h4 data-el="gr">«Συστημική» Οπτική</h4>
-    <h4 data-el="en" style="display:none">"Systemic" Perspective</h4>
-    <p data-el="gr">Ό,τι σε απασχολεί συνδέεται άμεσα με το περιβάλλον σου τις σχέσεις, την οικογένεια, την καθημερινότητά σου.</p>
-    <p data-el="en" style="display:none">Whatever concerns you is directly connected to your environment – your relationships, family, and daily life.</p>
+    <h4 data-el="gr">«Συστημική» Προσέγγιση</h4>
+    <h4 data-el="en" style="display:none">"Systemic" Approach</h4>
+    <p data-el="gr">Κάθε άνθρωπος βρίσκεται μέσα σε ένα σύστημα σχέσεων (οικογένεια, σχολείο, εργασία, φίλοι, κοινωνικές/ερωτικές σχέσεις κ.ά.). Με αυτό το σύστημα, αλληλεπιδρούμε συνεχώς. Το επηρεάζουμε και μας επηρεάζει. Όταν κάτι νοσεί στο σύστημα γύρω μας (π.χ. προβλήματα στην οικογένεια), αυτό μπορεί να εκφραστεί και μέσα από εμάς, με την μορφή κάποιου συμπτώματος, όπως άγχος, κατάθλιψη ή κρίσεις πανικού. Δεν νοσούμε εμείς, αλλά είμαστε ο αποδέκτης του προβλήματος. Γι' αυτό και είναι χρήσιμο, πέραν των ατομικών συνεδριών, να γίνονται και οικογενειακές συνεδρίες ή συνεδρίες ζεύγους, ώστε να αναδυθούν οι δυσλειτουργικές δυναμικές των σχέσεων, που συντηρούν το πρόβλημα.</p>
+    <p data-el="en" style="display:none">Every person exists within a system of relationships (family, school, work, friends, social/romantic relationships, etc.). We continuously interact with this system. We affect it, and it affects us. When something in the system around us is unwell (e.g., family problems), this can be expressed through us in the form of a symptom, such as anxiety, depression, or panic attacks. We are not sick, but we are the recipients of the problem. That is why it is useful, in addition to individual sessions, to have family or couples sessions, so that the dysfunctional relationship dynamics maintaining the problem can emerge.</p>
   </div>
 
   <div class="glossary-card reveal reveal-delay-1">
-    <h4 data-el="gr">«Αφηγηματική» Προσέγγιση</h4>
-    <h4 data-el="en" style="display:none">"Narrative" Approach</h4>
-    <p data-el="gr">Το πρόβλημα είναι το πρόβλημα – όχι εσύ. Μπορείς να δεις αυτό που σου συμβαίνει με έναν διαφορετικό τρόπο, και να ανακαλύψεις πλευρές του εαυτού σου που ίσως έχουν μείνει στο περιθώριο.</p>
-    <p data-el="en" style="display:none">The problem is the problem – not you. You can look at what is happening to you differently and discover parts of yourself that might have been sidelined.</p>
+    <h4 data-el="gr">«Αφηγηματική» Θεραπεία</h4>
+    <h4 data-el="en" style="display:none">"Narrative" Therapy</h4>
+    <p data-el="gr">Η προσέγγιση αυτή λειτουργεί ενάντια στην παθολογικοποίηση και στον στιγματισμό. Διαχωρίζει τον άνθρωπο από το πρόβλημα και αποδομεί κυρίαρχα κοινωνικά στερεότυπα/αφηγήματα, τα οποία δρουν δυσλειτουργικά στον ψυχισμό του, του βάζουν «ταμπέλες» και του δημιουργούν εσωτερικές συγκρούσεις. Στην θεραπεία, σταδιακά ξεχωρίζει τα μοτίβα αυτά από τον εαυτό του, και επιλέγει ποιος θέλει να είναι και πώς θα ζήσει από εδώ και πέρα, βρίσκοντας τις αξίες με τις οποίες θέλει να πορευτεί.</p>
+    <p data-el="en" style="display:none">This approach works against pathologizing and stigmatization. It separates the person from the problem and deconstructs dominant social stereotypes/narratives that act dysfunctionally on their psyche, label them, and create internal conflicts. In therapy, you gradually separate these patterns from yourself, choosing who you want to be and how to live from now on, finding the values by which you want to navigate.</p>
   </div>
 
   <div class="glossary-card reveal reveal-delay-2">
     <h4 data-el="gr">«Διαλογική» Θεραπεία</h4>
     <h4 data-el="en" style="display:none">"Dialogical" Therapy</h4>
-    <p data-el="gr">Η θεραπεία είναι μια συζήτηση. Δεν υπάρχουν έτοιμες απαντήσεις – υπάρχει χώρος για να σκεφτείς, να εκφραστείς και να καταλάβεις τι έχει νόημα για σένα.</p>
-    <p data-el="en" style="display:none">Therapy is a conversation. There are no ready-made answers – there is space to think, express yourself, and figure out what holds meaning for you.</p>
+    <p data-el="gr">Η θεραπεία είναι συνεργατική και επικεντρώνεται στον διάλογο. Μέσα από την συζήτηση, μπορούν να αναδυθούν για τον άνθρωπο νέες δυνατότητες, προοπτικές και ικανότητες. Σταδιακά, ενισχύεται η αυτεπίγνωσή του και μαθαίνει να γίνεται «ο ειδικός» του εαυτού του, βρίσκοντας τί έχει νόημα για τον ίδιο.</p>
+    <p data-el="en" style="display:none">Therapy is collaborative and focuses on dialogue. Through conversation, new possibilities, perspectives, and abilities can emerge for the individual. Gradually, your self-awareness is strengthened, and you learn to become the "expert" on yourself, finding what holds meaning for you.</p>
   </div>
 
   <div class="glossary-card reveal reveal-delay-3">
-    <h4 data-el="gr">Θεραπεία «Εστιασμένη στηΝ Λύση»</h4>
+    <h4 data-el="gr">Θεραπεία «Εστιασμένη στην Λύση»</h4>
     <h4 data-el="en" style="display:none">"Solution-Focused" Therapy</h4>
-    <p data-el="gr">Δεν χρειάζεται να μένεις μόνο στο παρελθόν. Μπορείς να εστιάσεις σε ό,τι σε βοηθά στο παρόν, και να βρεις τρόπους που λειτουργούν για εσένα.</p>
-    <p data-el="en" style="display:none">You don't have to dwell only on the past. You can focus on what helps you in the present and find ways that work for you.</p>
+    <p data-el="gr">Δεν αναλύουμε μόνο το παρελθόν, αλλά εστιάζουμε και σε λύσεις στο παρόν, και σε όσα μπορούν να αλλάξουν από εδώ και πέρα. Η θεραπεία επικεντρώνεται στο σήμερα, βοηθώντας άμεσα τον άνθρωπο να αναγνωρίσει τις δυνάμεις και τις ικανότητές του, και να βρει τρόπους λειτουργικούς γι' αυτόν.</p>
+    <p data-el="en" style="display:none">We don't just analyze the past; we also focus on solutions in the present, and on what can change moving forward. Therapy focuses on today, directly helping you recognize your strengths and abilities, and finding functional ways that work for you.</p>
   </div>
 
-  <div class="glossary-card reveal reveal-delay-2">
-    <h4 data-el="gr">«Εικαστική Θεραπεία»</h4>
-    <h4 data-el="en" style="display:none">"Art Therapy"</h4>
-    <p data-el="gr">Μερικές φορές οι λέξεις δεν φτάνουν. Μπορείς να εκφραστείς και με άλλους τρόπους, χωρίς να χρειάζεται να ξέρεις κάτι ή να έχεις εμπειρία.</p>
-    <p data-el="en" style="display:none">Sometimes words aren't enough. You can express yourself in other ways, without needing any prior knowledge or experience.</p>
-  </div>
-
-  <div class="glossary-card reveal reveal-delay-3" style="grid-column:1/-1">
-    <h4 data-el="gr">«Χωρίς Επίκριση»</h4>
-    <h4 data-el="en" style="display:none">"Without Judgment"</h4>
-    <p data-el="gr">Δεν χρειάζεται να κρύψεις τίποτα εδώ. Μπορείς να φέρεις ό,τι σε απασχολεί – ακόμη και όσα σου φαίνονται δύσκολα ή βαριά. Χωρίς φόβο ή κριτική.</p>
-    <p data-el="en" style="display:none">You don't need to hide anything here. You can bring whatever is on your mind – even what feels difficult or heavy. Without fear or judgment.</p>
+  <div class="glossary-card reveal reveal-delay-2" style="grid-column:1/-1">
+    <h4 data-el="gr">«Εικαστική» Θεραπεία</h4>
+    <h4 data-el="en" style="display:none">"Art" Therapy</h4>
+    <p data-el="gr">Μερικές φορές, οι λέξεις δεν φτάνουν για να εκφραστούμε. Γι' αυτό, μπορούμε να χρησιμοποιήσουμε την φαντασία και την δημιουργικότητά μας, μέσα από εικαστικά μέσα (π.χ. ζωγραφική, πηλό κ.ά.), αλλά και μέσα από την μουσική ή την γραφή. Δεν χρειάζεται να υπάρχουν καλλιτεχνικές δεξιότητες. Στόχος είναι η έκφραση των συναισθημάτων, με έναν τρόπο διαφορετικό, σε ένα ασφαλές περιβάλλον.</p>
+    <p data-el="en" style="display:none">Sometimes, words are not enough to express ourselves. Therefore, we can use our imagination and creativity, through artistic mediums (e.g., painting, clay, etc.), as well as through music or writing. No artistic skills are required. The goal is to express emotions in a different way, in a safe environment.</p>
   </div>
 
 </div>
+
+<div class="glossary-footer-quote reveal reveal-delay-2" data-el="gr">
+  «Ο άνθρωπος δεν είναι το πρόβλημα. Ο άνθρωπος είναι ο άνθρωπος και το πρόβλημα είναι το πρόβλημα».
+  <span>- Michael White, ψυχοθεραπευτής και συν-ιδρυτής της Αφηγηματικής προσέγγισης</span>
+</div>
+<div class="glossary-footer-quote reveal reveal-delay-2" data-el="en" style="display:none">
+  "The person is not the problem. The person is the person, and the problem is the problem."
+  <span>- Michael White, psychotherapist and co-founder of Narrative therapy</span>
+</div>
+
 </div>
 </section>
 
@@ -1009,8 +1109,8 @@ ul{list-style:none}
   <p class="contact-quote reveal reveal-delay-2" data-el="gr">Δεν χρειάζεται να έχεις έναν συγκεκριμένο λόγο για να ξεκινήσεις. Αρκεί να νιώθεις πως κάτι σε απασχολεί.</p>
   <p class="contact-quote reveal reveal-delay-2" data-el="en" style="display:none">You don't need a specific reason to start. It is enough to feel that something is troubling you.</p>
   
-  <a href="#contact" class="contact-cta-btn reveal reveal-delay-3" data-el="gr">Κλείσε Ραντεβού <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-  <a href="#contact" class="contact-cta-btn reveal reveal-delay-3" data-el="en" style="display:none">Book Appointment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-cta-btn reveal reveal-delay-3" data-el="gr">Κλείσε Ραντεβού <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-cta-btn reveal reveal-delay-3" data-el="en" style="display:none">Book Appointment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 </div>
 <div class="contact-info">
   <div class="contact-item reveal">
@@ -1048,7 +1148,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Αθήνα&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.6063688849495!2d23.748366976691456!3d37.986326100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd516f4ee5e1%3A0x633d779f4272183e!2sLeof.%20Alexandras%20132%2C%20Athina%20114%2071%2C%20Greece!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
@@ -1110,7 +1210,7 @@ if(mb)mb.textContent=currentLang==='gr'?'EN':'GR';
 // Update Document Lang tag
 document.documentElement.lang=currentLang==='gr'?'el':'en';
 
-// Update review read-more buttons based on expanded state and language
+// Update review read-more buttons
 document.querySelectorAll('.review-readmore').forEach(btn=>{
 const card=btn.closest('.review-card');
 const isExpanded=card&&card.classList.contains('expanded');
