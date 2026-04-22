@@ -109,7 +109,8 @@ ul{list-style:none}
 /* ABOUT */
 .about{background:var(--c-bg);overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
-.about-image-wrap{position:relative; position:sticky; top: 8rem;}
+/* Image shifted further down */
+.about-image-wrap{position:relative; position:sticky; top: 10rem; margin-top: 2rem;}
 .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
 .about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
 .about-image-wrap::after{content:'';position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;background:var(--c-accent-light);opacity:.08;border-radius:50%;z-index:0;transition:all .8s var(--ease-out-expo);animation:floatGlow 6s ease-in-out infinite}
@@ -128,14 +129,23 @@ ul{list-style:none}
 .about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
 
-/* CV SECTION */
-.cv-section{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--c-border);color:var(--c-text-soft)}
-.cv-section h3{font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--c-accent);margin-bottom:2rem;line-height:1.4}
-.cv-section h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em}
-.cv-section ul{list-style:none;padding-left:0;margin-bottom:1.5rem}
-.cv-section ul li{position:relative;padding-left:1.5rem;font-size:.85rem;font-weight:300;line-height:1.7;margin-bottom:.8rem}
-.cv-section ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:.65rem;color:var(--c-accent-light)}
-.cv-section p{font-size:.85rem;font-weight:300;line-height:1.7;margin-bottom:.6rem}
+/* CV MODAL TRIGGER SECTION */
+.cv-section{margin-top:1.5rem; color:var(--c-text-soft)}
+.cv-btn{font-family:var(--font-display); font-size:1.1rem; color:var(--c-accent); text-decoration:underline; text-underline-offset:4px; cursor:pointer; transition:color 0.3s; background:none; border:none; padding:0;}
+.cv-btn:hover{color:var(--c-accent-dark);}
+
+/* CV MODAL STYLES */
+.cv-modal{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.4s var(--ease-smooth);}
+.cv-modal.active{opacity:1;visibility:visible;}
+.cv-modal-overlay{position:absolute;inset:0;background:rgba(42,34,32,.8);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);cursor:pointer;}
+.cv-modal-content{position:relative;width:90%;max-width:650px;max-height:85vh;background:var(--c-bg);border-radius:4px;padding:3rem 2rem;overflow-y:auto;z-index:1;box-shadow:0 20px 40px rgba(0,0,0,.2);}
+.cv-modal-close{position:absolute;top:1.5rem;right:1.5rem;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--c-text);cursor:pointer;transition:transform 0.3s;}
+.cv-modal-close:hover{transform:rotate(90deg);color:var(--c-accent);}
+.cv-modal-content h3{font-family:var(--font-display);font-size:1.8rem;color:var(--c-accent);margin-bottom:1.5rem;text-align:center;}
+.cv-modal-content h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
+.cv-modal-content ul{list-style:none;padding-left:0;margin-bottom:1.5rem;}
+.cv-modal-content ul li{position:relative;padding-left:1.5rem;font-size:.9rem;font-weight:300;line-height:1.7;margin-bottom:.8rem;color:var(--c-text-soft);}
+.cv-modal-content ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:.65rem;color:var(--c-accent-light);}
 
 @keyframes floatGlow{0%,100%{transform:scale(1);opacity:.08}50%{transform:scale(1.3);opacity:.14}}
 
@@ -196,7 +206,7 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://github.com/agelmet/pap/blob/main/onlinee.jpg?raw=true') center center / cover no-repeat; color:var(--c-bg);position:relative;overflow:hidden; padding: clamp(4.5rem, 12vw, 8rem) clamp(1.2rem, 5vw, 4rem);}
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / cover no-repeat; color:var(--c-bg);position:relative;overflow:hidden; padding: clamp(4.5rem, 12vw, 8rem) clamp(1.2rem, 5vw, 4rem);}
 .online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
@@ -313,7 +323,6 @@ ul{list-style:none}
 .contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
 .contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
-/* Removed CSS filter so the map is full color */
 .contact-map iframe{width:100%;height:100%;border:0;}
 
 /* EMERGENCY */
@@ -346,7 +355,6 @@ ul{list-style:none}
   .about-grid{grid-template-columns:1fr;gap:2.5rem}
   .about-image-wrap{max-width:450px;margin:0 auto; position:static;}
   .philosophy-grid{grid-template-columns:1fr}
-  .online-features{grid-template-columns:1fr;gap:1rem}
   .faq-grid{grid-template-columns:1fr;gap:2rem}
   .faq-intro{position:static}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
@@ -375,8 +383,7 @@ ul{list-style:none}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
   .about-text p{font-size:.82rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
-  .cv-section h3{font-size: 1.2rem;}
-  .cv-section h4{font-size: .9rem;}
+  .cv-btn{font-size:1rem;}
   .roadmap-step{grid-template-columns:auto 1fr;gap:1.5rem}
   .roadmap-step:nth-child(odd) .roadmap-step-content{text-align:left}
   .roadmap-step:nth-child(odd) .roadmap-step-empty,.roadmap-step:nth-child(even) .roadmap-step-empty{display:none}
@@ -407,6 +414,7 @@ ul{list-style:none}
   .space-gallery{grid-template-columns:1fr}
   .review-card{min-width:260px}
   .philosophy-grid{gap:1rem}
+  .cv-modal-content{padding: 2.5rem 1.5rem;}
 }
 </style>
 </head>
@@ -424,7 +432,7 @@ ul{list-style:none}
 
 <nav class="nav" id="nav">
 <a href="#top" class="nav-brand" onclick="scrollTop(event)">
-  <img src="https://github.com/agelmet/PAPASARANTOPOULOU/blob/main/Gemini_Generated_Image_flgtkbflgtkbflgt.png?raw=true" alt="Logo" class="nav-brand-logo">
+  <img src="https://github.com/agelmet/pap/blob/main/recere-removebg-preview.png?raw=true" alt="Logo" class="nav-brand-logo">
   <div class="nav-brand-text">
     <div class="nav-brand-name" data-el="gr">Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου</div>
     <div class="nav-brand-name" data-el="en" style="display:none">Angeliki-Eleftheria I. Papasarantopoulou</div>
@@ -544,79 +552,10 @@ ul{list-style:none}
     <div class="about-quote reveal reveal-delay-3" data-el="en" style="display:none">"For me, a person is not identical to what they are going through. In therapy, there are no labels – only space to understand your experience and find solutions and new perspectives."</div>
 
     <div class="cv-section reveal reveal-delay-4" data-el="gr">
-      <h3>Αν θέλεις να δεις περισσότερα για εμένα και την εκπαίδευσή μου: Βιογραφικό</h3>
-      
-      <h4>Σπουδές</h4>
-      <ul>
-          <li>Δίπλωμα Μεταπτυχιακών Σπουδών (ΔΜΣ) στην Ψυχιατροδικαστική, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Ιατρικής (2024 - Σήμερα)</li>
-          <li>Μετεκπαίδευση στην Ψυχοθεραπεία μέσω Τέχνης και στην Εικαστική Θεραπεία, Κέντρο Ψυχοθεραπείας και Τέχνης Συνώθηση (2023 - 2024)</li>
-          <li>Πιστοποίηση Εκπαίδευσης στην Δικαστική Ψυχολογία και στην Εγκληματολογία, Περί Ψυχής: Πιστοποιημένο Εκπαιδευτικό Ινστιτούτο από τη Διεθνή Ένωση Συμβουλευτικής (2023 - 2024)</li>
-          <li>Δίπλωμα Μεταπτυχιακών Σπουδών (ΔΜΣ) στην Εγκληματολογία (κατεύθυνση: Εγκληματολογική Ψυχολογία), Università degli Studi eCampus, Τμήμα Εγκληματολογίας (2021-2024)</li>
-          <li>Μετεκπαίδευση στις Μεταμοντέρνες Προσεγγίσεις στην Συστημική Ψυχοθεραπεία, Bienestar Κέντρο Εστιασμένης στη Λύση Ψυχοθεραπείας (2020-2022)</li>
-          <li>Πτυχίο Ψυχολογίας, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Ψυχολογίας (2016-2021)</li>
-          <li>Higher National Diploma (HND) in Counselling and Psychology, Mediterranean College, Τμήμα Ψυχολογίας (2018 - 2020)</li>
-          <li>Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης στην Ιατρική Ψυχολογία, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ιατρικής (2018 - 2019)</li>
-          <li>Πιστοποιητικό Επιμόρφωσης στην Διαχείριση Χωρισμού-Διαζύγιο Γονέων, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ψυχολογίας (2018 - 2019)</li>
-          <li>Πιστοποιητικό Επιμόρφωσης στην Ψυχοθεραπεία: Θεωρία και Πράξη, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ψυχολογίας (2017 - 2018)</li>
-      </ul>
-
-      <h4>Επαγγελματική εμπειρία</h4>
-      <ul>
-          <li>Ψυχολόγος, Ιδιωτικό γραφείο, Ελλάδα (2022 - Σήμερα)</li>
-          <li>Ψυχολόγος, Σύλλογος Συμπαραστάσεως Κρατουμένων "Ο ΟΝΗΣΙΜΟΣ", Ελλάδα (2021 - 2023)</li>
-      </ul>
-
-      <h4>Μέλος συλλόγων</h4>
-      <ul>
-          <li>Σύλλογος Ελλήνων Ψυχολόγων (Σ.Ε.Ψ.), Τακτικό Μέλος (ΑM: 3269)</li>
-          <li>Κέντρο Μελέτης του Εγκλήματος (ΚΕ.Μ.Ε.), Τακτικό Μέλος (ΑΜ: 437)</li>
-          <li>Ελληνική Ψυχιατροδικαστική Εταιρία (ΕΨΔΕ), Τακτικό Μέλος (ΑΜ: 303)</li>
-      </ul>
-
-      <h4>Ξένες γλώσσες</h4>
-      <ul>
-          <li>Αγγλικά</li>
-      </ul>
-
-      <p style="margin-top: 1.5rem; color: var(--c-accent);">Αριθμός αδείας: 336629/18-4-2022</p>
+      <p>Αν θέλεις να δεις περισσότερα για εμένα και την εκπαίδευσή μου: <button class="cv-btn" onclick="openCvModal()">Βιογραφικό</button></p>
     </div>
-    
     <div class="cv-section reveal reveal-delay-4" data-el="en" style="display:none">
-      <h3>If you'd like to see more about me and my training: Resume</h3>
-      
-      <h4>Education</h4>
-      <ul>
-          <li>Master's Degree (MSc) in Forensic Psychiatry, National and Kapodistrian University of Athens, Medical School (2024 - Present)</li>
-          <li>Further Training in Art Psychotherapy and Art Therapy, Synothisi Center for Psychotherapy and Art (2023 - 2024)</li>
-          <li>Certification in Forensic Psychology and Criminology, Peri Psychis: Certified Educational Institute by the International Association for Counseling (2023 - 2024)</li>
-          <li>Master's Degree (MA) in Criminology (Specialization: Criminological Psychology), Università degli Studi eCampus, Faculty of Criminology (2021-2024)</li>
-          <li>Further Training in Postmodern Approaches to Systemic Psychotherapy, Bienestar Center for Solution-Focused Psychotherapy (2020-2022)</li>
-          <li>Bachelor's Degree in Psychology, National and Kapodistrian University of Athens, Department of Psychology (2016-2021)</li>
-          <li>Higher National Diploma (HND) in Counselling and Psychology, Mediterranean College, Department of Psychology (2018 - 2020)</li>
-          <li>Certificate of Specialized Training in Medical Psychology, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Medical School (2018 - 2019)</li>
-          <li>Certificate of Training in Separation Management-Parental Divorce, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Department of Psychology (2018 - 2019)</li>
-          <li>Certificate of Training in Psychotherapy: Theory and Practice, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Department of Psychology (2017 - 2018)</li>
-      </ul>
-
-      <h4>Professional Experience</h4>
-      <ul>
-          <li>Psychologist, Private Practice, Greece (2022 - Present)</li>
-          <li>Psychologist, Association for the Support of Prisoners "O ONISIMOS", Greece (2021 - 2023)</li>
-      </ul>
-
-      <h4>Memberships</h4>
-      <ul>
-          <li>Association of Greek Psychologists (SEPS), Regular Member (Reg. No: 3269)</li>
-          <li>Center for the Study of Crime (KEME), Regular Member (Reg. No: 437)</li>
-          <li>Hellenic Forensic Psychiatric Association (EpsDE), Regular Member (Reg. No: 303)</li>
-      </ul>
-
-      <h4>Foreign Languages</h4>
-      <ul>
-          <li>English</li>
-      </ul>
-
-      <p style="margin-top: 1.5rem; color: var(--c-accent);">License Number: 336629/18-4-2022</p>
+      <p>If you'd like to see more about me and my training: <button class="cv-btn" onclick="openCvModal()">Resume</button></p>
     </div>
 
   </div>
@@ -1035,8 +974,6 @@ ul{list-style:none}
 <div class="section-inner">
 <div class="reviews-header">
 <div>
-  <div class="section-tag reveal" data-el="gr">Η Φωνή των Θεραπευόμενων</div>
-  <div class="section-tag reveal" data-el="en" style="display:none">The Voice of Our Clients</div>
   <h2 class="section-title reveal reveal-delay-1"><span class="accent" data-el="gr">Αξιολογήσεις</span><span class="accent" data-el="en" style="display:none">Reviews</span></h2>
 </div>
 <div class="reviews-stats reveal reveal-delay-2">
@@ -1100,8 +1037,6 @@ ul{list-style:none}
 <div class="section-inner">
 <div class="contact-grid">
 <div class="contact-left">
-  <div class="section-tag reveal" data-el="gr">Επικοινωνία</div>
-  <div class="section-tag reveal" data-el="en" style="display:none">Contact</div>
   
   <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg)" data-el="gr">Το πρώτο βήμα<br>είναι να <span class="accent">ακουστείς</span></h2>
   <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg); display:none;" data-el="en">The first step<br>is to be <span class="accent">heard</span></h2>
@@ -1148,7 +1083,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.6063688849495!2d23.748366976691456!3d37.986326100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd516f4ee5e1%3A0x633d779f4272183e!2sLeof.%20Alexandras%20132%2C%20Athina%20114%2071%2C%20Greece!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3144.526978438175!2d23.74836021571408!3d37.98822557972111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b2e8a1562b%3A0xc34a6dfcc81ab163!2sLeof.%20Alexandras%20132%2C%20Athina%20114%2071%2C%20Greece!5e0!3m2!1sen!2sus!4v1713800000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
@@ -1165,6 +1100,76 @@ ul{list-style:none}
 <div class="footer-credit">Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener">Advon Media</a></div>
 </div>
 </footer>
+
+<div class="cv-modal" id="cvModal">
+  <div class="cv-modal-overlay" onclick="closeCvModal()"></div>
+  <div class="cv-modal-content">
+      <div class="cv-modal-close" onclick="closeCvModal()">✕</div>
+      <div data-el="gr">
+          <h3>Βιογραφικό</h3>
+          <h4>ΣΠΟΥΔΕΣ</h4>
+          <ul>
+              <li>Δίπλωμα Μεταπτυχιακών Σπουδών (ΔΜΣ) στην Ψυχιατροδικαστική, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Ιατρικής (2024 - Σήμερα)</li>
+              <li>Μετεκπαίδευση στην Ψυχοθεραπεία μέσω Τέχνης και στην Εικαστική Θεραπεία, Κέντρο Ψυχοθεραπείας και Τέχνης Συνώθηση (2023 - 2024)</li>
+              <li>Πιστοποίηση Εκπαίδευσης στην Δικαστική Ψυχολογία και στην Εγκληματολογία, Περί Ψυχής: Πιστοποιημένο Εκπαιδευτικό Ινστιτούτο από τη Διεθνή Ένωση Συμβουλευτικής (2023 - 2024)</li>
+              <li>Δίπλωμα Μεταπτυχιακών Σπουδών (ΔΜΣ) στην Εγκληματολογία (κατεύθυνση: Εγκληματολογική Ψυχολογία), Università degli Studi eCampus, Τμήμα Εγκληματολογίας (2021-2024)</li>
+              <li>Μετεκπαίδευση στις Μεταμοντέρνες Προσεγγίσεις στην Συστημική Ψυχοθεραπεία, Bienestar Κέντρο Εστιασμένης στη Λύση Ψυχοθεραπείας (2020-2022)</li>
+              <li>Πτυχίο Ψυχολογίας, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Ψυχολογίας (2016-2021)</li>
+              <li>Higher National Diploma (HND) in Counselling and Psychology, Mediterranean College, Τμήμα Ψυχολογίας (2018 - 2020)</li>
+              <li>Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης στην Ιατρική Ψυχολογία, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ιατρικής (2018 - 2019)</li>
+              <li>Πιστοποιητικό Επιμόρφωσης στην Διαχείριση Χωρισμού-Διαζύγιο Γονέων, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ψυχολογίας (2018 - 2019)</li>
+              <li>Πιστοποιητικό Επιμόρφωσης στην Ψυχοθεραπεία: Θεωρία και Πράξη, Κέντρο Συνεχιζόμενης Εκπαίδευσης και Δια Βίου Μάθησης (ΚΔΒΜ) του Ε.Κ.Π.Α, Τμήμα Ψυχολογίας (2017 - 2018)</li>
+          </ul>
+          <h4>ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</h4>
+          <ul>
+              <li>Ψυχολόγος, Ιδιωτικό γραφείο, Ελλάδα (2022 - Σήμερα)</li>
+              <li>Ψυχολόγος, Σύλλογος Συμπαραστάσεως Κρατουμένων "Ο ΟΝΗΣΙΜΟΣ", Ελλάδα (2021 - 2023)</li>
+          </ul>
+          <h4>ΜΕΛΟΣ ΣΥΛΛΟΓΩΝ</h4>
+          <ul>
+              <li>Σύλλογος Ελλήνων Ψυχολόγων (Σ.Ε.Ψ.), Τακτικό Μέλος (ΑM: 3269)</li>
+              <li>Κέντρο Μελέτης του Εγκλήματος (ΚΕ.Μ.Ε.), Τακτικό Μέλος (ΑΜ: 437)</li>
+              <li>Ελληνική Ψυχιατροδικαστική Εταιρία (ΕΨΔΕ), Τακτικό Μέλος (ΑΜ: 303)</li>
+          </ul>
+          <h4>ΞΕΝΕΣ ΓΛΩΣΣΕΣ</h4>
+          <ul>
+              <li>Αγγλικά</li>
+          </ul>
+      </div>
+      
+      <div data-el="en" style="display:none">
+          <h3>Resume</h3>
+          <h4>EDUCATION</h4>
+          <ul>
+              <li>Master's Degree (MSc) in Forensic Psychiatry, National and Kapodistrian University of Athens, Medical School (2024 - Present)</li>
+              <li>Further Training in Art Psychotherapy and Art Therapy, Synothisi Center for Psychotherapy and Art (2023 - 2024)</li>
+              <li>Certification in Forensic Psychology and Criminology, Peri Psychis: Certified Educational Institute by the International Association for Counseling (2023 - 2024)</li>
+              <li>Master's Degree (MA) in Criminology (Specialization: Criminological Psychology), Università degli Studi eCampus, Faculty of Criminology (2021-2024)</li>
+              <li>Further Training in Postmodern Approaches to Systemic Psychotherapy, Bienestar Center for Solution-Focused Psychotherapy (2020-2022)</li>
+              <li>Bachelor's Degree in Psychology, National and Kapodistrian University of Athens, Department of Psychology (2016-2021)</li>
+              <li>Higher National Diploma (HND) in Counselling and Psychology, Mediterranean College, Department of Psychology (2018 - 2020)</li>
+              <li>Certificate of Specialized Training in Medical Psychology, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Medical School (2018 - 2019)</li>
+              <li>Certificate of Training in Separation Management-Parental Divorce, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Department of Psychology (2018 - 2019)</li>
+              <li>Certificate of Training in Psychotherapy: Theory and Practice, Center for Continuing Education and Lifelong Learning (KEDIVIM) of N.K.U.A., Department of Psychology (2017 - 2018)</li>
+          </ul>
+          <h4>PROFESSIONAL EXPERIENCE</h4>
+          <ul>
+              <li>Psychologist, Private Practice, Greece (2022 - Present)</li>
+              <li>Psychologist, Association for the Support of Prisoners "O ONISIMOS", Greece (2021 - 2023)</li>
+          </ul>
+          <h4>MEMBERSHIPS</h4>
+          <ul>
+              <li>Association of Greek Psychologists (SEPS), Regular Member (Reg. No: 3269)</li>
+              <li>Center for the Study of Crime (KEME), Regular Member (Reg. No: 437)</li>
+              <li>Hellenic Forensic Psychiatric Association (EpsDE), Regular Member (Reg. No: 303)</li>
+          </ul>
+          <h4>FOREIGN LANGUAGES</h4>
+          <ul>
+              <li>English</li>
+          </ul>
+      </div>
+  </div>
+</div>
 
 <script>
 // Loader
@@ -1231,6 +1236,16 @@ function toggleFaq(el){
 const w=el.classList.contains('active');
 document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('active');i.querySelector('.faq-a').style.maxHeight='0'});
 if(!w){el.classList.add('active');el.querySelector('.faq-a').style.maxHeight=el.querySelector('.faq-a').scrollHeight+'px'}
+}
+
+// CV Modal
+function openCvModal() {
+  document.getElementById('cvModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeCvModal() {
+  document.getElementById('cvModal').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
 // Lightbox
