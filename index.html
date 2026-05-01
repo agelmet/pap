@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
-<!-- Minimalist Favicon: Greek letter Ψ intertwined with a thread -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='72' font-family='serif' font-size='75' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='68' font-family='serif' font-size='60' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -31,9 +30,6 @@ ul{list-style:none}
 ::-webkit-scrollbar-track{background:var(--c-bg)}
 ::-webkit-scrollbar-thumb{background:var(--c-accent-light);border-radius:3px}
 
-/* DASH FIX */
-.straight-dash { font-family: var(--font-body) !important; font-style: normal !important; }
-
 /* LOADER */
 .loader{position:fixed;inset:0;z-index:9999;background:var(--c-bg);display:flex;align-items:center;justify-content:center;transition:opacity .8s var(--ease-out-expo),visibility .8s}
 .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
@@ -45,39 +41,30 @@ ul{list-style:none}
 @keyframes loaderLine{to{transform:scaleX(1)}}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease-smooth); background: transparent;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease-smooth)}
 .nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--c-border)}
-
-/* Transparent Nav Styles (Default) */
-.nav-brand-name, .nav-brand-title, .nav-links a {color: var(--c-white); transition: color 0.3s;}
-.nav-hamburger span {background: var(--c-white);}
 .nav-brand{cursor:pointer;display:flex;align-items:center;gap:.8rem}
-.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 40%, transparent 70%); border-radius: 50%; padding: 2px;}
-.nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;line-height:1.2}
-.nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;margin-top:2px; color:rgba(255,255,255,0.8);}
+/* Transparent logo blending with enhanced drop shadow */
+.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.5) 50%, transparent 75%); filter: drop-shadow(0 0 10px rgba(255,255,255,0.8)); border-radius: 50%;}
+.nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
+/* Text turning black on scroll */
+.nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
+.nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
+.nav.scrolled .nav-brand-name{color:var(--c-text);}
+.nav.scrolled .nav-brand-title{color:var(--c-text-muted);}
+
 .nav-right{display:flex;align-items:center;gap:2rem}
 .nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-size:.65rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;position:relative}
+.nav-links a{font-size:.65rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--c-text-soft);transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--c-accent);transition:width .4s var(--ease-out-expo)}
+.nav-links a:hover{color:var(--c-text)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-white);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
-.nav-cta:hover{background:var(--c-white);color:var(--c-text)}
-.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid rgba(255,255,255,0.4);color:var(--c-white);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
+.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-text);color:var(--c-text);transition:all .4s var(--ease-out-expo)}
+.nav-cta:hover{background:var(--c-text);color:var(--c-bg)}
+.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
 .nav-lang:hover{border-color:var(--c-accent);color:var(--c-accent)}
-
-/* Scrolled Nav Styles */
-.nav.scrolled .nav-brand-name {color: var(--c-text);}
-.nav.scrolled .nav-brand-title {color: var(--c-text-muted);}
-.nav.scrolled .nav-links a {color: var(--c-text-soft);}
-.nav.scrolled .nav-links a:hover {color: var(--c-text);}
-.nav.scrolled .nav-brand-logo {background: transparent;}
-.nav.scrolled .nav-hamburger span {background: var(--c-text);}
-.nav.scrolled .nav-cta {border-color: var(--c-text); color: var(--c-text);}
-.nav.scrolled .nav-cta:hover {background: var(--c-text); color: var(--c-bg);}
-.nav.scrolled .nav-lang {border-color: var(--c-border-strong); color: var(--c-text-soft);}
-
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;padding:5px}
-.nav-hamburger span{width:24px;height:1px;transition:all .3s var(--ease-smooth)}
+.nav-hamburger span{width:24px;height:1px;background:var(--c-text);transition:all .3s var(--ease-smooth)}
 .nav-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
 .nav-hamburger.active span:nth-child(2){opacity:0}
 .nav-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
@@ -90,13 +77,11 @@ ul{list-style:none}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background-color:var(--c-bg)}
 .hero-bg{position:absolute;inset:0;z-index:1}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
-/* Shadow directly behind text on the right */
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
 .hero-text{max-width:620px;text-align:right}
 .hero-tag{font-size:.6rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1s 1.2s var(--ease-out-expo) forwards}
-/* Reduced font size and applied italic for the main hero heading */
-.hero-h1{font-family:var(--font-display);font-size:clamp(1.3rem,3.2vw,2.2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
+.hero-h1{font-family:var(--font-display);font-size:clamp(1.5rem,3.2vw,2.4rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
 .hero-h1 span.accent{color:var(--c-accent);font-style:italic}
 .hero-sub{font-size:.85rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
 .hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
@@ -121,7 +106,7 @@ ul{list-style:none}
 .section-inner{max-width:1200px;margin:0 auto}
 .section-tag{font-size:.58rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
 .section-tag::before{content:'';width:30px;height:1px;background:var(--c-accent)}
-.section-title{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,3.0rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
 .section-title .accent{color:var(--c-accent);font-style:normal}
 
 /* ABOUT */
@@ -214,21 +199,21 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-/* Updated to standard background positioning to avoid zooming issues while keeping cover and your colors/gradients */
-.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / 400px auto no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding: clamp(4.5rem, 12vw, 8rem) clamp(1.2rem, 5vw, 4rem);}
+/* Updated bottom padding to reduce gap before Divider */
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center/cover no-repeat; color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
 .online-tag::before{background:var(--c-accent-light)}
 .online-title{color:var(--c-bg)}
 .online-title .accent{color:var(--c-accent-light)}
 .online-text{font-size:.85rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
-.online-features{display:grid;grid-template-columns:1fr;gap:.8rem; margin-bottom:1.5rem}
-.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:300;color:rgba(250,248,245,.9)}
-.online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
+.online-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.78rem;font-weight:300;color:rgba(250,248,245,.9)}
+.online-feature svg{width:16px;height:16px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
-/* Adjusted top padding to reduce the empty space */
-.divider{position:relative;padding:clamp(2rem,6vw,3.5rem) clamp(1.5rem,5vw,4rem);overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
+/* Adjusted top padding to reduce the gap */
+.divider{position:relative;padding-top: 1.5rem; padding-bottom: clamp(3rem,8vw,5rem); padding-left: clamp(1.5rem,5vw,4rem); padding-right: clamp(1.5rem,5vw,4rem); overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
 .divider-text{text-align:center;position:relative;z-index:2;max-width:700px}
 .divider-tag{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
 .divider-h{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-white);line-height:1.5;font-style:italic;}
@@ -259,7 +244,7 @@ ul{list-style:none}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease-out-expo)}
 .faq-a-inner{padding:0 0 1.3rem;font-size:.82rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
-.faq-closing-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;line-height:1.5}
+.faq-closing-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;line-height:1.5;font-style:italic;}
 
 /* GLOSSARY */
 .glossary{background:var(--c-bg);border-top:1px solid var(--c-border)}
@@ -320,19 +305,18 @@ ul{list-style:none}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
 .contact-item{display:flex;gap:1.2rem;align-items:start}
-.contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden;}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
 .contact-item-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
 .contact-item-value{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
 .contact-item-value a{color:rgba(250,248,245,.85);transition:color .3s}
 .contact-item-value a:hover{color:var(--c-accent-light)}
 .contact-socials{display:flex;gap:.8rem;margin-top:.8rem}
-.contact-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo)}
+.contact-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo); overflow:hidden;}
 .contact-socials a:hover{border-color:var(--c-accent);background:var(--c-accent)}
 .contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
 .contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
-/* Fixing map issue: Valid embed link and removing the CSS filter */
 .contact-map iframe{width:100%;height:100%;border:0;}
 
 /* EMERGENCY */
@@ -380,12 +364,10 @@ ul{list-style:none}
   .nav-brand-title{font-size:.45rem;letter-spacing:.12em}
   .hero{min-height:100svh; background-color: var(--c-bg); align-items:flex-end;}
   .hero-bg img{object-fit:contain; object-position:top;}
-  /* Mobile Gradient: Top-to-bottom fade to reveal text at bottom */
   .hero-bg::after{background:linear-gradient(to top, rgba(250,248,245,1) 0%, rgba(250,248,245,.95) 40%, rgba(250,248,245,0) 80%);}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
   .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
-  /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
   .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
@@ -413,14 +395,14 @@ ul{list-style:none}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
   .service-info h3{font-size:1rem}
-  .online{background-size: 80% auto;} /* Keep it slightly scaled down for mobile to avoid cropping */
-  .divider-h{font-size:1.2rem;line-height:1.5}
+  .online{background-size: 80% auto;}
+  .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
   .review-card{min-width:280px;max-width:310px;padding:1.5rem}
   .reviews-score{font-size:2.2rem}
   .contact-quote{font-size:1.05rem}
   .faq-q h3{font-size:.92rem}
-  .faq-closing-quote{font-size:1.2rem;}
+  .faq-closing-quote{font-size:1.1rem;}
   .marquee-item{font-size:.7rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
 }
@@ -434,7 +416,6 @@ ul{list-style:none}
 </head>
 <body>
 
-<!-- LOADER -->
 <div class="loader" id="loader">
 <div class="loader-inner">
 <div class="loader-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
@@ -445,12 +426,9 @@ ul{list-style:none}
 </div>
 </div>
 
-<!-- NAV -->
 <nav class="nav" id="nav">
 <a href="#top" class="nav-brand" onclick="scrollTop(event)">
-  <div class="nav-brand-logo-wrap">
-    <img src="https://github.com/agelmet/pap/blob/main/recere-removebg-preview.png?raw=true" alt="Logo" class="nav-brand-logo">
-  </div>
+  <img src="https://github.com/agelmet/pap/blob/main/recere-removebg-preview.png?raw=true" alt="Logo" class="nav-brand-logo">
   <div class="nav-brand-text">
     <div class="nav-brand-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
     <div class="nav-brand-name" data-el="en" style="display:none">Angeliki<span class="straight-dash">-</span>Eleftheria I. Papasarantopoulou</div>
@@ -475,7 +453,6 @@ ul{list-style:none}
 </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
 <a href="#about" onclick="closeMenu()" data-el="gr">Προφίλ</a><a href="#about" onclick="closeMenu()" data-el="en" style="display:none">About</a>
 <a href="#services" onclick="closeMenu()" data-el="gr">Υπηρεσίες</a><a href="#services" onclick="closeMenu()" data-el="en" style="display:none">Services</a>
@@ -486,7 +463,6 @@ ul{list-style:none}
 <button class="mob-lang" onclick="toggleLang();closeMenu()" id="mobLangBtn">EN</button>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="top">
 <div class="hero-bg">
 <img src="https://github.com/agelmet/PAPASARANTOPOULOU/blob/main/ag2.jpg?raw=true" alt="Χώρος γραφείου" loading="eager">
@@ -509,7 +485,6 @@ ul{list-style:none}
 <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee">
 <div class="marquee-track" data-el="gr">
 <span class="marquee-item">ΣΥΣΤΗΜΙΚΗ & ΑΦΗΓΗΜΑΤΙΚΗ ΠΡΟΣΕΓΓΙΣΗ</span>
@@ -545,7 +520,6 @@ ul{list-style:none}
 </div>
 </div>
 
-<!-- ABOUT -->
 <section class="section about" id="about">
 <div class="section-inner">
 <div class="about-grid">
@@ -578,13 +552,13 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- CV SECTION (NEW FULL PAGE SECTION) -->
+<!-- CV SECTION -->
 <section class="section cv-page" id="cv">
 <div class="section-inner">
-  <div class="section-tag reveal" data-el="gr">Βιογραφικό</div>
-  <div class="section-tag reveal" data-el="en" style="display:none">Resume</div>
-  <h2 class="section-title reveal reveal-delay-1" data-el="gr">Εκπαίδευση & <span class="accent">Εμπειρία</span></h2>
-  <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">Education & <span class="accent">Experience</span></h2>
+  <div class="section-tag reveal" data-el="gr">Εκπαίδευση & Εμπειρία</div>
+  <div class="section-tag reveal" data-el="en" style="display:none">Education & Experience</div>
+  <h2 class="section-title reveal reveal-delay-1" data-el="gr"><span class="accent">Βιογραφικό</span></h2>
+  <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none"><span class="accent">Resume</span></h2>
 
   <div class="cv-content reveal reveal-delay-2" data-el="gr">
       <h4>ΣΠΟΥΔΕΣ</h4>
@@ -784,7 +758,6 @@ ul{list-style:none}
   <div class="roadmap-step-empty"></div>
 </div>
 
-<!-- Trail 1→2 -->
 <div class="roadmap-trail roadmap-trail-1 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C420,40 600,40 700,40 C750,40 780,50 780,60" />
@@ -808,7 +781,6 @@ ul{list-style:none}
   </div>
 </div>
 
-<!-- Trail 2→3 -->
 <div class="roadmap-trail roadmap-trail-2 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C380,40 200,40 100,40 C50,40 20,50 20,60" />
@@ -1085,6 +1057,8 @@ ul{list-style:none}
 <div class="reviews-carousel">
 <div class="reviews-track" id="reviewsTrack">
 
+<!-- Alternating: Doctoranytime, Google, Doctoranytime, Google... -->
+
 <div class="review-card">
 <div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
 <div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
@@ -1181,25 +1155,16 @@ ul{list-style:none}
     </div>
   </div>
   
-  <div class="contact-item reveal reveal-delay-4" style="margin-top:0.5rem">
-    <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
-    <div>
-      <div class="contact-item-label">Facebook</div>
-      <div class="contact-item-value"><a href="https://www.facebook.com/papasarantopoulou/" target="_blank" rel="noopener">/papasarantopoulou</a></div>
-    </div>
+  <div class="contact-socials reveal reveal-delay-4">
+    <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" aria-label="Doctoranytime" style="overflow:hidden; border:none; padding:0;">
+      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="DoctorAnytime" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+    </a>
   </div>
-  <div class="contact-item reveal reveal-delay-4">
-    <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="currentColor" font-family="serif" font-weight="700" stroke="none">d</text></svg></div>
-    <div>
-      <div class="contact-item-label">DoctorAnytime</div>
-      <div class="contact-item-value"><a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener">Κλείσε Ραντεβού</a></div>
-    </div>
-  </div>
-
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.526978438175!2d23.74836021571408!3d37.98822557972111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b2e8a1562b%3A0xc34a6dfcc81ab163!2sLeof.%20Alexandras%20132%2C%20Athina%20114%2071%2C%20Greece!5e0!3m2!1sen!2sus!4v1713800000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.426296331902!2d23.74381881533034!3d37.99042977972054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b7c4a1b8d5%3A0x8e8a0058f8b1c4c8!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEEuIFN0ZXBhbiAxMTQgNzEsIEdyZWVjZQ!5e0!3m2!1sen!2sus!4v1628172827182!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
