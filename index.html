@@ -67,18 +67,17 @@ ul{list-style:none}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--c-accent);transition:width .4s var(--ease-out-expo)}
 .nav-links a:hover{color:var(--c-text)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-white);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
-.nav-cta:hover{background:var(--c-white);color:var(--c-text)}
-.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid rgba(255,255,255,0.4);color:var(--c-white);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
+
+/* Buttons in black state universally so they show properly against the light right-side background */
+.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-text);color:var(--c-text);transition:all .4s var(--ease-out-expo)}
+.nav-cta:hover{background:var(--c-text);color:var(--c-bg)}
+.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
 .nav-lang:hover{border-color:var(--c-accent);color:var(--c-accent)}
 
 /* Scrolled Nav Styles */
 .nav.scrolled .nav-links a {color: var(--c-text-soft);}
 .nav.scrolled .nav-links a:hover {color: var(--c-text);}
 .nav.scrolled .nav-hamburger span {background: var(--c-text);}
-.nav.scrolled .nav-cta {border-color: var(--c-text); color: var(--c-text);}
-.nav.scrolled .nav-cta:hover {background: var(--c-text); color: var(--c-bg);}
-.nav.scrolled .nav-lang {border-color: var(--c-border-strong); color: var(--c-text-soft);}
 
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;padding:5px}
 .nav-hamburger span{width:24px;height:1px;transition:all .3s var(--ease-smooth)}
@@ -131,7 +130,6 @@ ul{list-style:none}
 /* ABOUT */
 .about{background:var(--c-bg);overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
-/* Image shifted further down */
 .about-image-wrap{position:relative; position:sticky; top: 10rem; margin-top: 2rem;}
 .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
 .about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
@@ -219,7 +217,7 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-/* True to size background without cropping */
+/* Updated to standard background positioning to avoid zooming issues while keeping cover and your colors/gradients */
 .online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
 .online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
@@ -326,7 +324,9 @@ ul{list-style:none}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
 .contact-item{display:flex;gap:1.2rem;align-items:start}
-.contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* Make icons clickable by keeping them structurally sound and responsive on hover */
+.contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden; color:inherit; cursor:pointer; transition:all .3s var(--ease-out-expo);}
+.contact-item-icon:hover{border-color:var(--c-accent-light); background:rgba(250,248,245,.05);}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
 .contact-item-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
 .contact-item-value{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
@@ -389,19 +389,18 @@ ul{list-style:none}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
   .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
-  /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
   .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
   .hero-btn{font-size:.58rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
   .hero-scroll{bottom:1.2rem}
   .section{padding:clamp(2.5rem,8vw,4rem) 1.2rem}
-  .section-title{font-size:clamp(1.5rem,5vw,2.2rem);line-height:1.25}
+  .section-title{font-size:clamp(1.3rem,5vw,2.0rem);line-height:1.25}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
   .about-text p{font-size:.82rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
-  .cv-section h3{font-size: 1.2rem;}
-  .cv-section h4{font-size: .9rem;}
+  .cv-page h2{margin-bottom:1.5rem;}
+  .cv-content h4{font-size: .9rem;}
   .roadmap-step{grid-template-columns:auto 1fr;gap:1.5rem}
   .roadmap-step:nth-child(odd) .roadmap-step-content{text-align:left}
   .roadmap-step:nth-child(odd) .roadmap-step-empty,.roadmap-step:nth-child(even) .roadmap-step-empty{display:none}
@@ -417,7 +416,7 @@ ul{list-style:none}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
   .service-info h3{font-size:1rem}
-  .online{background-size: contain;} /* Keep it fully contained */
+  .online{background-size: contain;} 
   .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
   .review-card{min-width:280px;max-width:310px;padding:1.5rem}
@@ -438,6 +437,7 @@ ul{list-style:none}
 </head>
 <body>
 
+<!-- LOADER -->
 <div class="loader" id="loader">
 <div class="loader-inner">
 <div class="loader-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
@@ -448,6 +448,7 @@ ul{list-style:none}
 </div>
 </div>
 
+<!-- NAV -->
 <nav class="nav" id="nav">
 <a href="#top" class="nav-brand" onclick="scrollTop(event)">
   <img src="https://github.com/agelmet/pap/blob/main/recere-removebg-preview.png?raw=true" alt="Logo" class="nav-brand-logo">
@@ -461,6 +462,7 @@ ul{list-style:none}
 <div class="nav-right">
   <div class="nav-links">
     <a href="#about" data-el="gr">Προφίλ</a><a href="#about" data-el="en" style="display:none">About</a>
+    <a href="#cv" data-el="gr">Βιογραφικό</a><a href="#cv" data-el="en" style="display:none">Resume</a>
     <a href="#services" data-el="gr">Υπηρεσίες</a><a href="#services" data-el="en" style="display:none">Services</a>
     <a href="#space" data-el="gr">Χώρος</a><a href="#space" data-el="en" style="display:none">Space</a>
     <a href="#faq" data-el="gr">Ερωτήσεις</a><a href="#faq" data-el="en" style="display:none">FAQ</a>
@@ -475,8 +477,10 @@ ul{list-style:none}
 </div>
 </nav>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
 <a href="#about" onclick="closeMenu()" data-el="gr">Προφίλ</a><a href="#about" onclick="closeMenu()" data-el="en" style="display:none">About</a>
+<a href="#cv" onclick="closeMenu()" data-el="gr">Βιογραφικό</a><a href="#cv" onclick="closeMenu()" data-el="en" style="display:none">Resume</a>
 <a href="#services" onclick="closeMenu()" data-el="gr">Υπηρεσίες</a><a href="#services" onclick="closeMenu()" data-el="en" style="display:none">Services</a>
 <a href="#space" onclick="closeMenu()" data-el="gr">Χώρος</a><a href="#space" onclick="closeMenu()" data-el="en" style="display:none">Space</a>
 <a href="#faq" onclick="closeMenu()" data-el="gr">Ερωτήσεις</a><a href="#faq" onclick="closeMenu()" data-el="en" style="display:none">FAQ</a>
@@ -485,6 +489,7 @@ ul{list-style:none}
 <button class="mob-lang" onclick="toggleLang();closeMenu()" id="mobLangBtn">EN</button>
 </div>
 
+<!-- HERO -->
 <section class="hero" id="top">
 <div class="hero-bg">
 <img src="https://github.com/agelmet/PAPASARANTOPOULOU/blob/main/ag2.jpg?raw=true" alt="Χώρος γραφείου" loading="eager">
@@ -507,6 +512,7 @@ ul{list-style:none}
 <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
 </section>
 
+<!-- MARQUEE -->
 <div class="marquee">
 <div class="marquee-track" data-el="gr">
 <span class="marquee-item">ΣΥΣΤΗΜΙΚΗ & ΑΦΗΓΗΜΑΤΙΚΗ ΠΡΟΣΕΓΓΙΣΗ</span>
@@ -542,6 +548,7 @@ ul{list-style:none}
 </div>
 </div>
 
+<!-- ABOUT -->
 <section class="section about" id="about">
 <div class="section-inner">
 <div class="about-grid">
@@ -1145,7 +1152,7 @@ ul{list-style:none}
 </div>
 <div class="contact-info">
   <div class="contact-item reveal">
-    <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+    <a href="tel:+306936854668" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Κινητό</div>
       <div class="contact-item-label" data-el="en" style="display:none">Mobile</div>
@@ -1153,7 +1160,7 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-1">
-    <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+    <a href="tel:+302114242851" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Σταθερό</div>
       <div class="contact-item-label" data-el="en" style="display:none">Landline</div>
@@ -1161,28 +1168,20 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-2">
-    <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+    <a href="mailto:epapasarantopoulou@gmail.com" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
     <div>
       <div class="contact-item-label">Email</div>
       <div class="contact-item-value"><a href="mailto:epapasarantopoulou@gmail.com">epapasarantopoulou@gmail.com</a></div>
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-3">
-    <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+    <a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Διεύθυνση</div>
       <div class="contact-item-label" data-el="en" style="display:none">Address</div>
-      <div class="contact-item-value" data-el="gr">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</div>
-      <div class="contact-item-value" data-el="en" style="display:none">132 Alexandras Avenue, Gkyzi, Athens</div>
+      <div class="contact-item-value" data-el="gr"><a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
+      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
     </div>
-  </div>
-  
-  <div class="contact-socials reveal reveal-delay-4">
-    <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" aria-label="Doctoranytime" style="overflow:hidden; border:none; padding:0;">
-      <!-- Changed from cover to contain and added a white background to prevent cropping -->
-      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="DoctorAnytime" style="width:100%; height:100%; object-fit:contain; border-radius:50%; background-color:#fff;">
-    </a>
   </div>
 </div>
 </div>
