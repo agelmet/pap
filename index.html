@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='68' font-family='serif' font-size='60' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
+<!-- Minimalist Favicon: Greek letter Ψ intertwined with a thread -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='72' font-family='serif' font-size='75' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -30,6 +31,9 @@ ul{list-style:none}
 ::-webkit-scrollbar-track{background:var(--c-bg)}
 ::-webkit-scrollbar-thumb{background:var(--c-accent-light);border-radius:3px}
 
+/* DASH FIX */
+.straight-dash { font-family: var(--font-body) !important; font-style: normal !important; }
+
 /* LOADER */
 .loader{position:fixed;inset:0;z-index:9999;background:var(--c-bg);display:flex;align-items:center;justify-content:center;transition:opacity .8s var(--ease-out-expo),visibility .8s}
 .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
@@ -41,11 +45,15 @@ ul{list-style:none}
 @keyframes loaderLine{to{transform:scaleX(1)}}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease-smooth)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease-smooth); background: transparent;}
 .nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--c-border)}
+
+/* Transparent Nav Styles (Default) */
+.nav-brand-name, .nav-brand-title, .nav-links a {color: var(--c-white); transition: color 0.3s;}
+.nav-hamburger span {background: var(--c-white);}
 .nav-brand{cursor:pointer;display:flex;align-items:center;gap:.8rem}
-/* Transparent logo blending with enhanced drop shadow */
-.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.5) 50%, transparent 75%); filter: drop-shadow(0 0 10px rgba(255,255,255,0.8)); border-radius: 50%;}
+/* Enhanced transparent logo blending with a larger drop shadow */
+.nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.7) 65%, transparent 85%); filter: drop-shadow(0 0 15px rgba(255,255,255,1)); border-radius: 50%; padding: 2px;}
 .nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
 /* Text turning black on scroll */
 .nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
@@ -59,12 +67,21 @@ ul{list-style:none}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--c-accent);transition:width .4s var(--ease-out-expo)}
 .nav-links a:hover{color:var(--c-text)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-text);color:var(--c-text);transition:all .4s var(--ease-out-expo)}
-.nav-cta:hover{background:var(--c-text);color:var(--c-bg)}
-.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
+.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-white);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
+.nav-cta:hover{background:var(--c-white);color:var(--c-text)}
+.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid rgba(255,255,255,0.4);color:var(--c-white);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
 .nav-lang:hover{border-color:var(--c-accent);color:var(--c-accent)}
+
+/* Scrolled Nav Styles */
+.nav.scrolled .nav-links a {color: var(--c-text-soft);}
+.nav.scrolled .nav-links a:hover {color: var(--c-text);}
+.nav.scrolled .nav-hamburger span {background: var(--c-text);}
+.nav.scrolled .nav-cta {border-color: var(--c-text); color: var(--c-text);}
+.nav.scrolled .nav-cta:hover {background: var(--c-text); color: var(--c-bg);}
+.nav.scrolled .nav-lang {border-color: var(--c-border-strong); color: var(--c-text-soft);}
+
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;padding:5px}
-.nav-hamburger span{width:24px;height:1px;background:var(--c-text);transition:all .3s var(--ease-smooth)}
+.nav-hamburger span{width:24px;height:1px;transition:all .3s var(--ease-smooth)}
 .nav-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
 .nav-hamburger.active span:nth-child(2){opacity:0}
 .nav-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
@@ -77,11 +94,13 @@ ul{list-style:none}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background-color:var(--c-bg)}
 .hero-bg{position:absolute;inset:0;z-index:1}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+/* Shadow directly behind text on the right */
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
 .hero-text{max-width:620px;text-align:right}
 .hero-tag{font-size:.6rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1s 1.2s var(--ease-out-expo) forwards}
-.hero-h1{font-family:var(--font-display);font-size:clamp(1.5rem,3.2vw,2.4rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
+/* Reduced font size and applied italic for the main hero heading */
+.hero-h1{font-family:var(--font-display);font-size:clamp(1.3rem,3.2vw,2.2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
 .hero-h1 span.accent{color:var(--c-accent);font-style:italic}
 .hero-sub{font-size:.85rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
 .hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
@@ -106,12 +125,13 @@ ul{list-style:none}
 .section-inner{max-width:1200px;margin:0 auto}
 .section-tag{font-size:.58rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
 .section-tag::before{content:'';width:30px;height:1px;background:var(--c-accent)}
-.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,3.0rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
 .section-title .accent{color:var(--c-accent);font-style:normal}
 
 /* ABOUT */
 .about{background:var(--c-bg);overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+/* Image shifted further down */
 .about-image-wrap{position:relative; position:sticky; top: 10rem; margin-top: 2rem;}
 .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
 .about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
@@ -131,7 +151,7 @@ ul{list-style:none}
 .about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
 
-/* CV SECTION (NEW) */
+/* CV SECTION (NEW FULL PAGE SECTION) */
 .cv-page{background:var(--c-bg-alt); padding-top:4rem; padding-bottom:4rem;}
 .cv-page h2{margin-bottom: 2.5rem;}
 .cv-content h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
@@ -199,17 +219,18 @@ ul{list-style:none}
 .phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-/* Updated bottom padding to reduce gap before Divider */
-.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center/cover no-repeat; color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
+/* True to size background without cropping */
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
+.online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
 .online-tag::before{background:var(--c-accent-light)}
 .online-title{color:var(--c-bg)}
 .online-title .accent{color:var(--c-accent-light)}
 .online-text{font-size:.85rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
-.online-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.78rem;font-weight:300;color:rgba(250,248,245,.9)}
-.online-feature svg{width:16px;height:16px;stroke:var(--c-accent-light);flex-shrink:0}
+.online-features{display:grid;grid-template-columns:1fr;gap:.8rem; margin-bottom:1.5rem}
+.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:300;color:rgba(250,248,245,.9)}
+.online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
 /* Adjusted top padding to reduce the gap */
@@ -305,7 +326,7 @@ ul{list-style:none}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
 .contact-item{display:flex;gap:1.2rem;align-items:start}
-.contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden;}
+.contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
 .contact-item-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
 .contact-item-value{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
@@ -368,6 +389,7 @@ ul{list-style:none}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
   .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
+  /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
   .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
@@ -395,7 +417,7 @@ ul{list-style:none}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
   .service-info h3{font-size:1rem}
-  .online{background-size: 80% auto;}
+  .online{background-size: contain;} /* Keep it fully contained */
   .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
   .review-card{min-width:280px;max-width:310px;padding:1.5rem}
@@ -758,6 +780,7 @@ ul{list-style:none}
   <div class="roadmap-step-empty"></div>
 </div>
 
+<!-- Trail 1→2 -->
 <div class="roadmap-trail roadmap-trail-1 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C420,40 600,40 700,40 C750,40 780,50 780,60" />
@@ -781,6 +804,7 @@ ul{list-style:none}
   </div>
 </div>
 
+<!-- Trail 2→3 -->
 <div class="roadmap-trail roadmap-trail-2 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C380,40 200,40 100,40 C50,40 20,50 20,60" />
@@ -1057,8 +1081,6 @@ ul{list-style:none}
 <div class="reviews-carousel">
 <div class="reviews-track" id="reviewsTrack">
 
-<!-- Alternating: Doctoranytime, Google, Doctoranytime, Google... -->
-
 <div class="review-card">
 <div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
 <div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
@@ -1158,7 +1180,8 @@ ul{list-style:none}
   <div class="contact-socials reveal reveal-delay-4">
     <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
     <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" aria-label="Doctoranytime" style="overflow:hidden; border:none; padding:0;">
-      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="DoctorAnytime" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+      <!-- Changed from cover to contain and added a white background to prevent cropping -->
+      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="DoctorAnytime" style="width:100%; height:100%; object-fit:contain; border-radius:50%; background-color:#fff;">
     </a>
   </div>
 </div>
