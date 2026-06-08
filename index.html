@@ -6,7 +6,7 @@
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
 <!-- Minimalist Favicon: Greek letter Ψ intertwined with a thread -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='72' font-family='serif' font-size='75' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='76' font-family='serif' font-size='95' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -38,8 +38,8 @@ ul{list-style:none}
 .loader{position:fixed;inset:0;z-index:9999;background:var(--c-bg);display:flex;align-items:center;justify-content:center;transition:opacity .8s var(--ease-out-expo),visibility .8s}
 .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .loader-inner{text-align:center}
-.loader-name{font-family:var(--font-display);font-size:clamp(1.2rem,2.8vw,2rem);font-weight:300;letter-spacing:.15em;color:var(--c-text);opacity:0;animation:loaderFade 1.2s var(--ease-out-expo) forwards;text-transform:uppercase}
-.loader-title{font-family:var(--font-body);font-size:clamp(.55rem,1vw,.7rem);font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--c-text-muted);opacity:0;animation:loaderFade 1s .4s var(--ease-out-expo) forwards;margin-top:.6rem}
+.loader-name{font-family:var(--font-display);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:300;letter-spacing:.15em;color:var(--c-text);opacity:0;animation:loaderFade 1.2s var(--ease-out-expo) forwards;text-transform:uppercase}
+.loader-title{font-family:var(--font-body);font-size:clamp(.95rem,1.2vw,1.1rem);font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--c-text-muted);opacity:0;animation:loaderFade 1s .4s var(--ease-out-expo) forwards;margin-top:.6rem}
 .loader-line{width:60px;height:1px;background:var(--c-accent);margin:1.2rem auto 0;transform:scaleX(0);animation:loaderLine 1.2s .3s var(--ease-out-expo) forwards}
 @keyframes loaderFade{to{opacity:1}}
 @keyframes loaderLine{to{transform:scaleX(1)}}
@@ -55,7 +55,7 @@ ul{list-style:none}
 /* Enhanced transparent logo blending with a larger drop shadow */
 .nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.7) 65%, transparent 85%); filter: drop-shadow(0 0 15px rgba(255,255,255,1)); border-radius: 50%; padding: 2px;}
 .nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
-/* Text turning black on scroll */
+/* Text turning black on scroll - using the original smaller sizes */
 .nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
 .nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
 .nav.scrolled .nav-brand-name{color:var(--c-text);}
@@ -96,13 +96,11 @@ ul{list-style:none}
 /* Shadow directly behind text on the right */
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
-.hero-text{max-width:620px;text-align:right}
-.hero-tag{font-size:.6rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1s 1.2s var(--ease-out-expo) forwards}
-/* Reduced font size and applied italic for the main hero heading */
+.hero-text{max-width:700px;text-align:right}
 .hero-h1{font-family:var(--font-display);font-size:clamp(1.3rem,3.2vw,2.2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
 .hero-h1 span.accent{color:var(--c-accent);font-style:italic}
-.hero-sub{font-size:.85rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
-.hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
+.hero-sub{font-size:.95rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
+.hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
 .hero-btn:hover{background:var(--c-accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(196,130,110,.3)}
 .hero-btn svg{width:16px;height:16px;transition:transform .3s}
 .hero-btn:hover svg{transform:translateX(4px)}
@@ -115,14 +113,14 @@ ul{list-style:none}
 /* MARQUEE */
 .marquee{padding:1.3rem 0;background:var(--c-burgundy);overflow:hidden}
 .marquee-track{display:flex;animation:marquee 35s linear infinite;width:max-content}
-.marquee-item{font-family:var(--font-display);font-size:.8rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-bg);white-space:nowrap;padding:0 1.8rem;display:flex;align-items:center;gap:1.8rem}
-.marquee-item::after{content:'✦';font-size:.45rem;color:var(--c-accent-light)}
+.marquee-item{font-family:var(--font-display);font-size:.9rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-bg);white-space:nowrap;padding:0 1.8rem;display:flex;align-items:center;gap:1.8rem}
+.marquee-item::after{content:'✦';font-size:.6rem;color:var(--c-accent-light)}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* SECTIONS */
 .section{padding:clamp(3.5rem,10vw,7rem) clamp(1.2rem,5vw,4rem)}
 .section-inner{max-width:1200px;margin:0 auto}
-.section-tag{font-size:.58rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
+.section-tag{font-size:.85rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
 .section-tag::before{content:'';width:30px;height:1px;background:var(--c-accent)}
 .section-title{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,3.0rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
 .section-title .accent{color:var(--c-accent);font-style:normal}
@@ -130,7 +128,6 @@ ul{list-style:none}
 /* ABOUT */
 .about{background:var(--c-bg);overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
-/* Image shifted further down */
 .about-image-wrap{position:relative; position:sticky; top: 10rem; margin-top: 2rem;}
 .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
 .about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
@@ -141,11 +138,11 @@ ul{list-style:none}
 .about-image:hover img{transform:scale(1.04)}
 .about-image-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,130,110,.1) 0%,transparent 50%);z-index:1;pointer-events:none;mix-blend-mode:multiply}
 .about-image-caption{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(42,34,32,.75),transparent);z-index:2}
-.about-image-caption span{font-family:var(--font-display);font-size:.7rem;letter-spacing:.15em;color:var(--c-accent-light);text-transform:uppercase}
+.about-image-caption span{font-family:var(--font-display);font-size:.85rem;letter-spacing:.15em;color:var(--c-accent-light);text-transform:uppercase}
 .about-content{display:flex;flex-direction:column;justify-content:center}
 .about-content .section-tag{margin-bottom:.8rem}
 .about-content .section-title{font-kerning:none;font-feature-settings:"kern" 0;}
-.about-text p{font-size:.85rem;font-weight:300;line-height:1.85;color:var(--c-text-soft);margin-bottom:1.1rem}
+.about-text p{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--c-text-soft);margin-bottom:1.1rem}
 .about-text p:first-of-type::first-letter{font-family:var(--font-display);font-size:2.8rem;float:left;line-height:1;margin-right:.4rem;margin-top:.12rem;color:var(--c-accent);font-weight:400}
 .about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
@@ -155,9 +152,9 @@ ul{list-style:none}
 .cv-page h2{margin-bottom: 2.5rem;}
 .cv-content h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
 .cv-content ul{list-style:none;padding-left:0;margin-bottom:1.5rem;}
-.cv-content ul li{position:relative;padding-left:1.5rem;font-size:.9rem;font-weight:300;line-height:1.7;margin-bottom:.8rem;color:var(--c-text-soft);}
-.cv-content ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:.65rem;color:var(--c-accent-light);}
-.cv-content p{font-size:.9rem;font-weight:300;color:var(--c-accent);margin-top:1.5rem;}
+.cv-content ul li{position:relative;padding-left:1.5rem;font-size:1rem;font-weight:300;line-height:1.7;margin-bottom:.8rem;color:var(--c-text-soft);}
+.cv-content ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:.85rem;color:var(--c-accent-light);}
+.cv-content p{font-size:1.05rem;font-weight:300;color:var(--c-accent);margin-top:1.5rem;}
 
 @keyframes floatGlow{0%,100%{transform:scale(1);opacity:.08}50%{transform:scale(1.3);opacity:.14}}
 
@@ -185,10 +182,10 @@ ul{list-style:none}
 
 .roadmap-step-content h3{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.4rem);font-weight:400;color:var(--c-text);margin-bottom:.6rem;transition:color .3s}
 .roadmap-step:hover .roadmap-step-content h3{color:var(--c-accent)}
-.roadmap-step-content p{font-size:.82rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:380px}
+.roadmap-step-content p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:380px}
 .roadmap-step:nth-child(odd) .roadmap-step-content p{margin-left:auto}
 .roadmap-step-empty{min-width:0}
-.roadmap-subtitle{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:600px;margin-top:.5rem}
+.roadmap-subtitle{font-size:.98rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:600px;margin-top:.5rem}
 
 /* SERVICES */
 .services{background:var(--c-bg)}
@@ -199,7 +196,7 @@ ul{list-style:none}
 .service-num{font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--c-accent-light);min-width:40px}
 .service-info h3{font-family:var(--font-display);font-size:clamp(1rem,2.2vw,1.4rem);font-weight:400;color:var(--c-text);margin-bottom:.3rem;transition:color .3s}
 .service-item:hover .service-info h3{color:var(--c-accent)}
-.service-info p{font-size:.8rem;font-weight:300;color:var(--c-text-muted);max-height:0;overflow:hidden;transition:all .5s var(--ease-out-expo);line-height:1.75}
+.service-info p{font-size:1rem;font-weight:300;color:var(--c-text-muted);max-height:0;overflow:hidden;transition:all .5s var(--ease-out-expo);line-height:1.75}
 .service-item.active .service-info p{max-height:300px;margin-top:.7rem}
 .service-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease-out-expo);flex-shrink:0}
 .service-toggle svg{width:12px;height:12px;stroke:var(--c-text-soft);transition:transform .4s var(--ease-out-expo)}
@@ -215,10 +212,9 @@ ul{list-style:none}
 .phil-card:hover{border-color:var(--c-accent-light);transform:translateY(-3px);box-shadow:0 12px 35px rgba(42,34,32,.06)}
 .phil-num{font-family:var(--font-display);font-size:2.2rem;font-weight:300;color:var(--c-accent-light);opacity:.5;margin-bottom:.6rem}
 .phil-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:500;letter-spacing:.02em;margin-bottom:.6rem;color:var(--c-text)}
-.phil-card p{font-size:.8rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.phil-card p{font-size:1rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-/* Updated to standard background positioning to avoid zooming issues while keeping cover and your colors/gradients */
 .online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
 .online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
@@ -226,18 +222,17 @@ ul{list-style:none}
 .online-tag::before{background:var(--c-accent-light)}
 .online-title{color:var(--c-bg)}
 .online-title .accent{color:var(--c-accent-light)}
-.online-text{font-size:.85rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
+.online-text{font-size:.95rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
 .online-features{display:grid;grid-template-columns:1fr;gap:.8rem; margin-bottom:1.5rem}
-.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:300;color:rgba(250,248,245,.9)}
+.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.95rem;font-weight:300;color:rgba(250,248,245,.9)}
 .online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
-/* Adjusted top padding to reduce the gap */
 .divider{position:relative;padding-top: 1.5rem; padding-bottom: clamp(3rem,8vw,5rem); padding-left: clamp(1.5rem,5vw,4rem); padding-right: clamp(1.5rem,5vw,4rem); overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
 .divider-text{text-align:center;position:relative;z-index:2;max-width:700px}
-.divider-tag{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
+.divider-tag{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
 .divider-h{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-white);line-height:1.5;font-style:italic;}
-.divider-author{font-size:.7rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
+.divider-author{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
 
 /* SPACE */
 .space{background:var(--c-bg)}
@@ -255,7 +250,7 @@ ul{list-style:none}
 .faq{background:var(--c-bg-alt);position:relative}
 .faq-grid{display:grid;grid-template-columns:.8fr 1fr;gap:3.5rem;align-items:start}
 .faq-intro{position:sticky;top:7rem}
-.faq-intro p{font-size:.82rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
+.faq-intro p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .faq-item{border-bottom:1px solid var(--c-border-strong);overflow:hidden}
 .faq-q{padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1.2rem}
 .faq-q h3{font-family:var(--font-display);font-size:1rem;font-weight:400;color:var(--c-text);transition:color .3s}
@@ -263,13 +258,13 @@ ul{list-style:none}
 .faq-q-icon{width:26px;height:26px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease-out-expo);font-size:.75rem;color:var(--c-text-soft)}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease-out-expo)}
-.faq-a-inner{padding:0 0 1.3rem;font-size:.82rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.faq-a-inner{padding:0 0 1.3rem;font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 .faq-closing-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;line-height:1.5;font-style:italic;}
 
 /* GLOSSARY */
 .glossary{background:var(--c-bg);border-top:1px solid var(--c-border)}
 .glossary-intro{max-width:700px;margin-bottom:2.5rem}
-.glossary-intro p{font-size:.85rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
+.glossary-intro p{font-size:.95rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .glossary-card{padding:2rem;background:var(--c-bg-alt);border:1px solid transparent;position:relative;overflow:hidden;transition:all .5s var(--ease-out-expo)}
 .glossary-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(to right,var(--c-accent),var(--c-accent-light));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out-expo)}
@@ -277,7 +272,7 @@ ul{list-style:none}
 .glossary-card:hover::after{transform:scaleX(1)}
 .glossary-card h4{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--c-accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
 .glossary-card h4::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--c-accent-light);flex-shrink:0;opacity:.6}
-.glossary-card p{font-size:.78rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.glossary-card p{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 .glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-text);line-height:1.5}
 .glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.7rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em}
 
@@ -287,7 +282,7 @@ ul{list-style:none}
 .reviews-stats{display:flex;align-items:center;gap:1.2rem}
 .reviews-score{font-family:var(--font-display);font-size:2.8rem;font-weight:300;color:var(--c-text)}
 .reviews-stars{color:var(--c-accent);font-size:.85rem;letter-spacing:2px}
-.reviews-count{font-size:.7rem;color:var(--c-text-muted);font-weight:300}
+.reviews-count{font-size:.85rem;color:var(--c-text-muted);font-weight:300}
 .reviews-track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:.5rem}
 .reviews-track::-webkit-scrollbar{display:none}
 .review-card{min-width:340px;max-width:380px;scroll-snap-align:start;padding:1.8rem;background:var(--c-bg);border:1px solid var(--c-border);flex-shrink:0;transition:all .4s var(--ease-smooth)}
@@ -295,23 +290,26 @@ ul{list-style:none}
 .review-source{display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem}
 .review-source img{height:16px;width:auto;opacity:.6}
 .review-source svg{height:15px;width:auto;opacity:.6}
-.review-source-label{font-size:.6rem;color:var(--c-text-muted);font-weight:300}
+.review-source-label{font-size:.85rem;color:var(--c-text-muted);font-weight:300}
 .review-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
 .review-rating{font-family:var(--font-display);font-size:1.3rem;font-weight:400;color:var(--c-accent)}
-.review-stars-static{font-size:.65rem;color:var(--c-accent);letter-spacing:1px}
-.review-text{font-size:.78rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:.8rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;transition:all .3s}
+.review-stars-static{font-size:.85rem;color:var(--c-accent);letter-spacing:1px}
+.review-text{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:.8rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;transition:all .3s}
 .review-card.expanded .review-text{-webkit-line-clamp:unset}
-.review-readmore{font-size:.65rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--c-accent);cursor:pointer;display:inline-block;margin-bottom:.8rem;border-bottom:1px solid transparent;transition:border-color .3s}
+.review-readmore{font-size:.85rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--c-accent);cursor:pointer;display:inline-block;margin-bottom:.8rem;border-bottom:1px solid transparent;transition:border-color .3s}
 .review-readmore:hover{border-color:var(--c-accent)}
-.review-meta{font-size:.65rem;color:var(--c-text-muted);font-weight:300;display:flex;justify-content:space-between}
+.review-meta{font-size:.85rem;color:var(--c-text-muted);font-weight:300;display:flex;justify-content:space-between}
 .reviews-nav{display:flex;gap:.6rem;margin-top:1.8rem;justify-content:center}
 .reviews-nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo)}
 .reviews-nav button:hover{background:var(--c-accent);border-color:var(--c-accent)}
 .reviews-nav button:hover svg{stroke:var(--c-white)}
 .reviews-nav button svg{width:14px;height:14px;stroke:var(--c-text-soft)}
-.review-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;font-size:.65rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--c-accent);transition:gap .3s}
-.review-link:hover{gap:.8rem}
-.review-link svg{width:13px;height:13px}
+
+/* Custom Review Link Buttons */
+.review-btn{font-size:.85rem; padding:.8rem 1.5rem; border:1px solid var(--c-accent); color:var(--c-accent); border-radius:4px; display:inline-flex; align-items:center; gap:.5rem; text-transform:uppercase; letter-spacing:0.1em; transition:all 0.3s;}
+.review-btn:hover{background:var(--c-accent); color:var(--c-white);}
+.review-btn svg{width:20px; height:20px; fill:currentColor;}
+.review-btn img{width:28px; height:28px; border-radius:50%; object-fit:contain; background:#fff; padding:2px;}
 
 /* CONTACT */
 .contact{background:var(--c-burgundy);color:var(--c-bg);position:relative;overflow:hidden}
@@ -320,38 +318,33 @@ ul{list-style:none}
 .contact-left .section-tag{color:var(--c-accent-light)}
 .contact-left .section-tag::before{background:var(--c-accent-light)}
 .contact-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:rgba(250,248,245,.6);margin-bottom:2rem;line-height:1.6}
-.contact-cta-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
+.contact-cta-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
 .contact-cta-btn:hover{background:var(--c-accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(196,130,110,.3)}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
-.contact-item{display:flex;gap:1.2rem;align-items:start}
+.contact-item{display:flex;gap:1.2rem;align-items:center}
 /* Make icons clickable by keeping them structurally sound and responsive on hover */
 .contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden; color:inherit; cursor:pointer; transition:all .3s var(--ease-out-expo);}
 .contact-item-icon:hover{border-color:var(--c-accent-light); background:rgba(250,248,245,.05);}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
 .contact-item-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
-.contact-item-value{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
+.contact-item-value{font-size:.95rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
 .contact-item-value a{color:rgba(250,248,245,.85);transition:color .3s}
 .contact-item-value a:hover{color:var(--c-accent-light)}
-.contact-socials{display:flex;gap:.8rem;margin-top:.8rem}
-.contact-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo); overflow:hidden;}
-.contact-socials a:hover{border-color:var(--c-accent);background:var(--c-accent)}
-.contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
-.contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
-/* Fixing map issue: Valid embed link and removing the CSS filter */
+/* Valid map embed URL linking to the exact location */
 .contact-map iframe{width:100%;height:100%;border:0;}
 
 /* EMERGENCY */
 .emergency{background:var(--c-surface);padding:1.2rem clamp(1.2rem,5vw,4rem);text-align:center}
-.emergency p{font-size:.7rem;font-weight:300;color:var(--c-text-soft);line-height:1.8}
+.emergency p{font-size:.85rem;font-weight:300;color:var(--c-text-soft);line-height:1.8}
 .emergency a{color:var(--c-burgundy);font-weight:400;border-bottom:1px solid var(--c-accent-light)}
 
 /* FOOTER */
 .footer{background:var(--c-burgundy);padding:1.5rem clamp(1.2rem,5vw,4rem);border-top:1px solid rgba(250,248,245,.06)}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem}
-.footer-copy{font-size:.6rem;color:rgba(250,248,245,.3);font-weight:300}
-.footer-credit{font-size:.6rem;color:rgba(250,248,245,.3);font-weight:300}
+.footer-copy{font-size:.85rem;color:rgba(250,248,245,.3);font-weight:300}
+.footer-credit{font-size:.85rem;color:rgba(250,248,245,.3);font-weight:300}
 .footer-credit a{color:var(--c-accent-light);transition:color .3s}
 .footer-credit a:hover{color:var(--c-accent)}
 
@@ -391,17 +384,17 @@ ul{list-style:none}
   .hero-bg::after{background:linear-gradient(to top, rgba(250,248,245,1) 0%, rgba(250,248,245,.95) 40%, rgba(250,248,245,0) 80%);}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
-  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
+  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.85rem;letter-spacing:.25em}
   /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
-  .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
-  .hero-btn{font-size:.58rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
+  .hero-sub{font-size:1.1rem;line-height:1.7;margin-bottom:2rem}
+  .hero-btn{font-size:.85rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
   .hero-scroll{bottom:1.2rem}
   .section{padding:clamp(2.5rem,8vw,4rem) 1.2rem}
   .section-title{font-size:clamp(1.3rem,5vw,2.0rem);line-height:1.25}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
-  .about-text p{font-size:.82rem}
+  .about-text p{font-size:1rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
   .cv-page h2{margin-bottom:1.5rem;}
   .cv-content h4{font-size: .9rem;}
@@ -420,22 +413,17 @@ ul{list-style:none}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
   .service-info h3{font-size:1rem}
-  .online{background-size: contain;} /* Keep it fully contained */
+  .online{background-size: 80% auto;} /* Ensure image scales properly on mobile */
   .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
-  .review-card{min-width:280px;max-width:310px;padding:1.5rem}
+  /* Exact size for perfectly contained 1 by 1 view on mobile without cropping */
+  .review-card{min-width:100%;max-width:100%;padding:1.5rem;flex: 0 0 100%;}
   .reviews-score{font-size:2.2rem}
   .contact-quote{font-size:1.05rem}
   .faq-q h3{font-size:.92rem}
   .faq-closing-quote{font-size:1.1rem;}
   .marquee-item{font-size:.7rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
-}
-
-@media(max-width:480px){
-  .space-gallery{grid-template-columns:1fr}
-  .review-card{min-width:260px}
-  .philosophy-grid{gap:1rem}
 }
 </style>
 </head>
@@ -496,10 +484,8 @@ ul{list-style:none}
 </div>
 <div class="hero-content">
 <div class="hero-text">
-  <div class="hero-tag" data-el="gr">Ψυχολόγος</div>
-  <div class="hero-tag" data-el="en" style="display:none">Psychologist</div>
   
-  <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από μια άλλη οπτική.</span></h1>
+  <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από&nbsp;μια&nbsp;άλλη&nbsp;οπτική.</span></h1>
   <h1 class="hero-h1" data-el="en" style="display:none">Whatever you're facing, it doesn't define you.<br><span class="accent">Together, we can look at it from a different perspective.</span></h1>
   
   <p class="hero-sub" data-el="gr">Εδώ θα βρεις έναν ζεστό και ασφαλή χώρο, όπου μπορείς να είσαι ο εαυτός σου.<br>Χωρίς επίκριση – με αποδοχή, κατανόηση και στήριξη σε όσα σε απασχολούν.</p>
@@ -509,7 +495,7 @@ ul{list-style:none}
   <a href="#contact" class="hero-btn" data-el="en" style="display:none">CONTACT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 </div>
 </div>
-<div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+<div class="hero-scroll"><span data-el="gr">Scroll</span><span data-el="en" style="display:none">Scroll</span><div class="hero-scroll-line"></div></div>
 </section>
 
 <div class="marquee">
@@ -616,6 +602,7 @@ ul{list-style:none}
       <ul>
           <li>Αγγλικά</li>
       </ul>
+      <p style="margin-top: 1.5rem; color: var(--c-accent);">Αριθμός αδείας: 336629/18-4-2022</p>
   </div>
 
   <div class="cv-content reveal reveal-delay-2" data-el="en" style="display:none">
@@ -647,6 +634,7 @@ ul{list-style:none}
       <ul>
           <li>English</li>
       </ul>
+      <p style="margin-top: 1.5rem; color: var(--c-accent);">License Number: 336629/18-4-2022</p>
   </div>
 </div>
 </section>
@@ -1081,41 +1069,212 @@ ul{list-style:none}
   <div><div class="reviews-stars">★★★★★</div><div class="reviews-count">50+ <span data-el="gr">αξιολογήσεις</span><span data-el="en" style="display:none">reviews</span></div></div>
 </div>
 </div>
-<p data-el="en" style="display:none;font-size:.72rem;font-weight:300;color:var(--c-text-muted);margin-bottom:1.5rem">Reviews are displayed in their original language (Greek).</p>
 
 <div class="reviews-carousel">
 <div class="reviews-track" id="reviewsTrack">
 
+<!-- Doctoranytime Reviews -->
 <div class="review-card">
 <div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
 <div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
-<div class="review-text">Η Αγγελική στο γραφείο της με έχει βοηθήσει να κάνω σημαντικά βήματα στη ζωή μου. Ο χώρος είναι πολύ φιλικός και ζεστός, και μόλις μπαίνεις νιώθεις άνεση και ασφάλεια. Από την πρώτη στιγμή ένιωσα ότι με καταλαβαίνει πραγματικά και ότι μπορώ να μιλήσω για οτιδήποτε χωρίς κρίση.</div>
-<span class="review-readmore" onclick="toggleReview(event,this)">Διαβάστε περισσότερα</span>
-<div class="review-meta"><span>Ευαγγελία</span><span>12 Μαρ 2026</span></div>
-</div>
-
-<div class="review-card">
-<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
-<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text">Εδώ και 5 μήνες με έχει αναλάβει και δεν περίμενα να ήταν τόσο καλή. Ότι καλύτερο η Αγγελική. Με έχει βοηθήσει πάρα πολύ στο να αντιμετωπίζω πραγματικά τα προβλήματα, μέσα από ώρες εξάσκησης τρόπου σκέψης.</div>
-<span class="review-readmore" onclick="toggleReview(event,this)">Διαβάστε περισσότερα</span>
-<div class="review-meta"><span>Giorgos Panagiotopoulos</span><span>2026</span></div>
+<div class="review-text" data-el="gr">Η Αγγελική στο γραφείο της με έχει βοηθήσει να κάνω σημαντικά βήματα στη ζωή μου. Ο χώρος είναι πολύ φιλικός και ζεστός, και μόλις μπαίνεις νιώθεις άνεση και ασφάλεια. Από την πρώτη στιγμή ένιωσα ότι με καταλαβαίνει πραγματικά και ότι μπορώ να μιλήσω για οτιδήποτε χωρίς κρίση. Οι συμβουλές και οι τεχνικές που μου έχει διδάξει με έχουν αλλάξει βαθιά, τόσο συναισθηματικά όσο και στην καθημερινότητά μου. Είναι πραγματικά ένας άνθρωπος που κάνει τη διαφορά και νιώθω ευγνωμοσύνη για τη βοήθειά της.</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki has helped me take significant steps in my life at her office. The space is very friendly and warm, and as soon as you walk in, you feel comfort and safety. From the very first moment, I felt that she truly understands me and that I can talk about anything without judgment. The advice and techniques she has taught me have changed me deeply, both emotionally and in my daily life. She is truly a person who makes a difference, and I am grateful for her help.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Ευαγγελία</span><span data-el="en" style="display:none">Evangelia</span></div>
 </div>
 
 <div class="review-card">
 <div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
 <div class="review-top"><span class="review-rating">9.8 <span class="review-stars-static">★★★★★</span></span></div>
-<div class="review-text">Με την Αγγελική ένιωσα φουλ άνετα και ότι βρίσκομαι σε ένα ασφαλές περιβάλλον όπου μπορώ να μιλήσω ανοιχτά από την πρώτη στιγμή. Με βοήθησε ουσιαστικά στο να διαχειριστώ διάφορες δυσκολίες μου.</div>
-<span class="review-readmore" onclick="toggleReview(event,this)">Διαβάστε περισσότερα</span>
-<div class="review-meta"><span>Giorgos</span><span>08 Μαρ 2026</span></div>
+<div class="review-text" data-el="gr">Με την Αγγελική ένιωσα φουλ άνετα και ότι βρίσκομαι σε ένα ασφαλές περιβάλλον όπου μπορώ να μιλήσω ανοιχτά από την πρώτη στιγμή. Με βοήθησε ουσιαστικά στο να διαχειριστώ διάφορες δυσκολίες μου. Μέσα από ώρες συζητήσεων και καθοδήγησης με κατάφερε να δω τα πράγματα από μια διαφορετική οπτική. Είναι ότι καλύτερο και τη συστήνω ανεπιφύλακτα...</div>
+<div class="review-text" data-el="en" style="display:none">With Angeliki, I felt completely comfortable and in a safe environment where I could speak openly from the very first moment. She significantly helped me manage various difficulties. Through hours of discussion and guidance, she managed to help me see things from a different perspective. She is the best, and I highly recommend her...</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Giorgos</span><span data-el="en" style="display:none">Giorgos</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Η Αγγελική είναι άριστη επαγγελματίας αλλά και πολύ ζεστός άνθρωπος! Απο την πρώτη στιγμή νιώθεις οτι μπορείς να ανοιχτείς χωρίς φόβο ή κριτική! Φαίνεται οτι αγαπά αυτό που κάνει και σε καθοδηγεί με πραγματικό ενδιαφέρον και ενσυναίσθηση να βρείς λύση στα προβλήματά σου! Την προτείνω ανεπιφύλακτα σε όποιον αναζητά έναν ειδικό που συνδυάζει γνώση, εμπειρία, κατανόηση και καλοσύνη!</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki is an excellent professional but also a very warm person! From the first moment, you feel that you can open up without fear or judgment! It shows that she loves what she does and guides you with genuine interest and empathy to find a solution to your problems! I highly recommend her to anyone looking for an expert who combines knowledge, experience, understanding, and kindness!</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Ελεάννα</span><span data-el="en" style="display:none">Eleanna</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Η πρώτη μου επαφή με την Αγγελική θα έλεγα ότι ήταν αρκετά θετική, επαγγελματική συμπεριφορά, ευχάριστη παρουσία, σίγουρα θα νιώσεις άνετα μαζί της, μου φάνηκε αρκετά έμπειρη με σωστές τοποθετήσεις και σκεπτικό. Έδειξε ενδιαφέρον και ασχολήθηκε με τα θέματα μου. Το γραφείο είναι κοντά σε μετρό, ωραίος χώρος, καθαρός, ωραία διακόσμηση και το πιο σημαντικό έχει θέα προς τα έξω και δεν είσαι κλεισμένος σε τέσσερις τοίχους. Σίγουρα θα την ξανά επισκεφτώ.</div>
+<div class="review-text" data-el="en" style="display:none">My first contact with Angeliki was quite positive; professional behavior, pleasant presence, you will definitely feel comfortable with her. She seemed quite experienced with correct insights and reasoning. She showed interest and engaged with my issues. The office is close to the metro, a nice space, clean, beautifully decorated, and most importantly, it has an outward view, so you are not enclosed in four walls. I will definitely visit her again.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Ανδρέας</span><span data-el="en" style="display:none">Andreas</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Η Αγγελική είναι μια ψυχολόγος που συνδυάζει επαγγελματισμό με μια φιλική και προσιτή προσέγγιση. Από την πρώτη στιγμή που μιλάς μαζί της νιώθεις ότι έχεις μπροστά σου μια καλή φίλη που σε ακούει με σεβασμό χωρίς να σε κρίνει . Διαθέτει γνώσεις από τον ιατρικό τομέα, κάτι που την καθιστά ικανή να προσεγγίσει τα προβλήματα ολιστικά . Ένα από τα στοιχεία που κάνει τη συνεργασία μας αποτελεσματική είναι η χρήση μεθόδων, όπως η τήρηση ημερολογίου , η ζωγραφική. Όποτε είναι αναγκαίο μου προτείνει την μέθοδο που μου ταιριάζει προκειμένου να εντοπίσουμε ζητήματα που χρειάζονται μεγαλύτερη προσοχή . Επιπλέον, αυτό που πραγματικά την ξεχωρίζει είναι η συνεχή υποστήριξή της.Η Αγγελική δείχνει αληθινό ενδιαφέρον για όσα σε απασχολούν.Συνολικά, η συνεργασία μας έχει βελτιώσει το άγχους μου, τη σχέση μου με τους ανθρώπους και με τον εαυτό μου . Κάθε επίσκεψη γίνεται μια ευχάριστη εμπειρία, όπου νιώθεις ότι έχεις δίπλα σου όχι μόνο έναν επαγγελματία, αλλά έναν αληθινό σύμμαχο στην καθημερινότητά σου</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki is a psychologist who combines professionalism with a friendly and approachable attitude. From the first moment you talk to her, you feel like you have a good friend in front of you who listens respectfully without judging you. She has knowledge from the medical field, making her capable of approaching problems holistically. One of the elements that makes our collaboration effective is the use of methods such as journaling and painting. Whenever necessary, she suggests the method that suits me to identify issues that need more attention. Moreover, what truly sets her apart is her continuous support. Angeliki shows genuine interest in your concerns. Overall, our collaboration has improved my anxiety, my relationship with people, and with myself. Each visit becomes a pleasant experience, where you feel you have not just a professional by your side, but a true ally in your daily life.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">mariza</span><span data-el="en" style="display:none">mariza</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Η Αγγελική είναι ένας γλυκύτατος και ζεστός άνθρωπος που σε κάνει να νιώθεις άνετα από την πρώτη στιγμή, σαν να μιλάς με κάποιον που γνωρίζεις χρόνια. Από την πρώτη μας συνεδρία ένιωσα μια απίστευτη ηρεμία και αποδοχή. Σε ακούει με προσοχή και ενδιαφέρον, και με έναν φυσικό και ευχάριστο τρόπο σε βοηθά να δεις τα πράγματα πιο καθαρά. Οι συνεδρίες μαζί της αποτελούν ένα ασφαλές λιμάνι , όπου μπορείς να εκφράσεις τα συναισθήματα σου ελεύθερα. Νιώθω ευγνώμων που τη βρήκα και τη συστήνω ανεπιφύλακτα σε όποιον αναζητά μια υποστηρικτική, ζεστή και βαθιά ανθρώπινη επαγγελματία.</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki is an incredibly sweet and warm person who makes you feel comfortable from the first moment, as if you are talking to someone you've known for years. From our first session, I felt an incredible calmness and acceptance. She listens carefully and with interest, and in a natural, pleasant way, she helps you see things more clearly. Sessions with her are a safe haven where you can express your feelings freely. I feel grateful to have found her and highly recommend her to anyone looking for a supportive, warm, and deeply human professional.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Αλέξανδρος</span><span data-el="en" style="display:none">Alexandros</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Ευγενική και εξαιρετική στη δουλειά της!</div>
+<div class="review-text" data-el="en" style="display:none">Polite and excellent at her job!</div>
+<div class="review-meta"><span data-el="gr">GEORGIOS</span><span data-el="en" style="display:none">GEORGIOS</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Ήμουν κάπως διστακτικός αρχικά, όσον αφορά την απόφαση να επιδιώξω μια πρώτη επαφή με κάποιον/αν ψυχοθεραπευτή/τρια. Επέλεξα, μετά από αρκετή έρευνα να επικοινωνήσω με την κυρία Α.-Ε.Παπασαραντοπούλου. Συνάντησα μια επιστήμονα, άρτια κατηρτισμένη στην ειδικότητά της, πολύ περισσότερο όμως, έναν Άνθρωπο με μια σπάνια αμεσότητα, απλότητα, και ειλικρίνεια. Κέρδισε την εμπιστοσύνη μου αμέσως. Ένιωσα πως μπορώ να "είμαι ο εαυτός μου", όπως λέμε. Είναι δίπλα μου κάθε φορά, και μαζί της άρχισα να "σκύβω" μέσα μου, με τρόπο που δεν είχα ξανακάνει ποτέ στο παρελθόν. Η Αγγελική είναι μια σπάνια περίπτωση ανθρώπου που ασκεί πραγματικό λειτούργημα. Όποτε χρειαστεί, δεν (περι)ορίζεται στα ισχύοντα τυπικά χρονικά πλαίσια, ενώ οι γνώσεις και η πείρα της είναι πραγματικά ξεχωριστές. Τι άλλο θα μπορούσα να πω; Ίσως, ό,τι και τα δύο ονόματά της: χάρη στην Αγγελική έχω αρχίσει να βρίσκω την... ελευθερία μου! Την συστήνω ανεπιφύλακτα για το αληθινά λυτρωτικό "ταξίδι" της ψυχοθεραπείας...</div>
+<div class="review-text" data-el="en" style="display:none">I was somewhat hesitant at first about deciding to reach out to a psychotherapist. After quite a bit of research, I chose to contact Mrs. A.-E. Papasarantopoulou. I met a scientist, fully qualified in her specialty, but more importantly, a Human being with rare directness, simplicity, and honesty. She won my trust immediately. I felt I could "be myself," as they say. She is by my side every time, and with her, I started looking inwards in a way I had never done before. Angeliki is a rare case of a person who truly performs a vocation. Whenever needed, she is not limited by standard timeframes, and her knowledge and experience are truly special. What else could I say? Perhaps, playing with both of her names: thanks to Angeliki (Angel), I have started to find my... eleftheria (Freedom)! I highly recommend her for the truly liberating "journey" of psychotherapy...</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">ΚΩΝΣΤΑΝΤΙΝΟΣ</span><span data-el="en" style="display:none">KONSTANTINOS</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Η Αγγελική είναι μια άρτια καταρτισμένη και εξαιρετική ψυχολόγος. Με τον μειλίχιο τρόπο της σου εμπνέει εμπιστοσύνη, σιγουριά και ασφάλεια. Μπορείς να συνομιλήσεις μαζί της για όλα τα προβλήματα που σε απασχολούν και να βρείτε από κοινού την πιο κατάλληλη για την αντιμετώπιση της περίπτωσης λύση. Αγγελική σε ευχαριστώ.</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki is a fully qualified and exceptional psychologist. With her gentle manner, she inspires trust, certainty, and safety. You can talk to her about all the problems concerning you, and together find the most appropriate solution for your case. Angeliki, thank you.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Dimitris</span><span data-el="en" style="display:none">Dimitris</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
+<div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
+<div class="review-text" data-el="gr">Η κυρία Αγγελική είναι εξαιρετική επαγγελματίας, με εξαιρετική ικανότητα να ακούει και να κατανοεί τις ανάγκες μου. Η υποστήριξή της είναι πολύτιμη και με έχει βοηθήσει σημαντικά στην προσωπική μου ανάπτυξη. Είναι ιδιαίτερα γλυκιά και δείχνει πάντα συμπαράσταση, κάνοντάς με να νιώθω άνετα . Με τη συνδυασμένη επαγγελματικότητα και ανθρωπιά της, την συνιστώ ανεπιφύλακτα.</div>
+<div class="review-text" data-el="en" style="display:none">Ms. Angeliki is an excellent professional, with an exceptional ability to listen and understand my needs. Her support is invaluable and has significantly helped me in my personal development. She is particularly sweet and always shows solidarity, making me feel comfortable. With her combined professionalism and humanity, I highly recommend her.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Δημητρα</span><span data-el="en" style="display:none">Dimitra</span></div>
+</div>
+
+<!-- Google Reviews -->
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Εδώ και 5 μήνες με χει αναλάβει και δεν περίμενα να ήταν τόσο καλή..ότι καλύτερο η Αγγελική. Με χει βοηθήσει πάρα πολύ στο να αντιμετωπίζω πραγματικά τα προβλήματα, μέσα από ώρες εξάσκησης τρόπου σκέψης. Είναι πολύ ήρεμη και καταλαβαίνει τα πάντα!! Ασχολείται πολύ βαθιά με το κάθε πρόβλημα και φτάνει πάντα στην ρίζα. Να τις λέτε πάντα την αλήθεια και ότι νιώθετε, μετά αφήστε να κάνει τα μαγικά της !!</div>
+<div class="review-text" data-el="en" style="display:none">She has been seeing me for 5 months now and I didn't expect her to be this good... Angeliki is the best. She has helped me immensely in truly facing my problems, through hours of practicing my way of thinking. She is very calm and understands everything!! She dives very deep into each problem and always gets to the root. Always tell her the truth and what you feel, then let her work her magic!!</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Giorgos Panagiotopoulos</span><span data-el="en" style="display:none">Giorgos Panagiotopoulos</span></div>
 </div>
 
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματά μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητές μου.</div>
-<span class="review-readmore" onclick="toggleReview(event,this)">Διαβάστε περισσότερα</span>
-<div class="review-meta"><span>Alexandros Skoularikas</span><span>2025</span></div>
+<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητες μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
+<div class="review-text" data-el="en" style="display:none">I am truly grateful to have met Angeliki. She came into my life during one of the hardest periods, when I was drowning in problems and my emotions. She helped me believe in my potential again and overcome things I never thought I could. Angeliki is an incredibly sweet person who truly loves what she does, and it shows in every session. She radiates an incredible warmth and inspires trust from the very first moment, making you feel comfortable and able to open up without any fear. She is a flawless professional, but above all, a very good and bright person. This is reflected in every session, giving therapy a beautiful energy that makes the process so special. Her presence has changed my life.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Alexandros Skoularikas</span><span data-el="en" style="display:none">Alexandros Skoularikas</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Εξαιρετική επαγγελματίας, με γνώση, συνέπεια και ουσιαστική παρουσία. Δημιουργεί ένα ήρεμο και υποστηρικτικό κλίμα, που βοηθά πραγματικά στην εξέλιξη της διαδικασίας. Τη συστήνω ανεπιφύλακτα!</div>
+<div class="review-text" data-el="en" style="display:none">Excellent professional, with knowledge, consistency, and a meaningful presence. She creates a calm and supportive atmosphere that truly aids the progress of the process. I highly recommend her!</div>
+<div class="review-meta"><span data-el="gr">Art Sym</span><span data-el="en" style="display:none">Art Sym</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Η κυρία Παπασαραντοπούλου είναι ψυχολόγος που διαθέτει ένα ευρύ και εκτεταμένο πεδίο σπουδών. Έχει αφιερώσει χρόνο, μεράκι και ώρες εκπαίδευσης ώστε να ανταποκριθεί στις προσωπικές μου ανάγκες. Όσον αφορά στη δική μου περίπτωση, η κυρία Παπασαραντοπούλου κατανόησε τους φόβους, τις επιφυλάξεις, τις ανάγκες και την ιδιαιτερότητα της κατάστασης μου . Λειτούργησε εγκάρδεια, με καλοσύνη, ευγένεια, ανοχή, υπομονή και ενσυναίσθηση. Κατανόησε και γνώρισε την ουσία μου σαν ένα ξεχωριστό άτομο, με διαφορετικές σκέψεις, νοοτροπία, εικόνες, ιδεολογία, βιώματα και πεποιθήσεις, χωρίς να διακατέχεται η ίδια από στερεότυπα, προκαταλήψεις κ δογματικές, ιδεοληπτικές απόψεις. Με σαφή, συνετό, ειλικρινή και αξιόπιστο τρόπο μου διαβίβασε κατευθυντήριες γραμμές και συμβουλές, οι οποίες σταδιακά με βοήθησαν εις βάθος να αναγνωρίσω το μέγεθος του προβλήματος και τις διαφορετικές πτυχές του. Αισθάνθηκα από την πρώτη στιγμή άνετα κ λόγω των επικοινωνιακών και κοινωνικών δεξιοτήτων της με βοήθησε να εκφραστώ ελεύθερα, χωρίς κανέναν δισταγμό και καμία επιφύλαξη. Γνωρίζει ν ακούει με προσοχή. Είναι πολύ στοργική, συμπονετική κ έμπιστη και μέσα από τις συνεδρίες μας καταφέραμε από κοινού να ξετυλίξουμε το κουβάρι και να ανιχνεύσουμε στιγμές και αναμνήσεις του παρελθόντος μου, που λειτουργούσαν επιβαρυντικά, και πυροδοτούσαν και μεγέθυναν τα αρνητικά και εξαντλητικά μου συναισθήματα. Με βοήθησε να αγαπήσω τον εαυτό μου επιτέλους και ν θεραπεύσω τραύματα κ πληγές που κουβαλούσα στην πραγματικότητα χρόνια και δεν το είχα αντιληφθεί.</div>
+<div class="review-text" data-el="en" style="display:none">Mrs. Papasarantopoulou is a psychologist with a broad and extensive field of study. She has dedicated time, passion, and hours of training to meet my personal needs. In my case, she understood my fears, reservations, needs, and the peculiarity of my situation. She acted cordially, with kindness, politeness, tolerance, patience, and empathy. She understood and got to know my essence as a distinct individual, with different thoughts, mentality, imagery, ideology, experiences, and beliefs, without being driven by stereotypes, prejudices, or dogmatic, obsessive views. In a clear, prudent, honest, and reliable manner, she passed on guidelines and advice which gradually helped me deeply recognize the magnitude of the problem and its different facets. I felt comfortable from the very first moment, and due to her communication and social skills, she helped me express myself freely, without hesitation or reservation. She knows how to listen carefully. She is very affectionate, compassionate, and trustworthy. Through our sessions, we jointly managed to untangle the thread and trace moments and memories from my past that were acting burdensomely, triggering and magnifying my negative and exhausting emotions. She helped me finally love myself and heal traumas and wounds that I had actually been carrying for years without realizing it.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">ΒΑΣΙΛΙΚΗ ΠΡΕΒΕΖΑΝΟΥ</span><span data-el="en" style="display:none">VASILIKI PREVEZANOU</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Η Αγγελική είναι μια από τις καλύτερες ψυχολόγους, και αισθάνομαι ευγνώμων που είχα την τύχη να την γνωρίσω. Εξαιρετική επιστήμονας με πάρα πολλές γνώσεις, γλυκός άνθρωπος, ευγενική, φιλική, προσηνής, με πολλή κατανόηση, σε κάνει αμέσως να αισθάνεσαι άνετα ό,τι και αν αντιμετωπίζεις. Και ο χώρος του γραφείου της είναι πολύ επιμελημένος και ζεστός. Σε δύσκολες στιγμές μου με βοήθησε πραγματικά. Σε όποιον αναζητά ψυχολόγο, ανεπιφύλακτα θα την σύστηνα!</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki is one of the best psychologists, and I feel grateful to have had the luck to meet her. An excellent scientist with a vast amount of knowledge, a sweet person, polite, friendly, approachable, with a lot of understanding, she immediately makes you feel comfortable no matter what you are facing. Her office space is also very well curated and warm. During my difficult times, she truly helped me. To anyone looking for a psychologist, I would highly recommend her!</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">George Raps</span><span data-el="en" style="display:none">George Raps</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Η Αγγελική είναι ένα ευγενέστατο, γλυκύτατο και γεμάτο καλοσύνη πλάσμα, που θα σε κερδίσει από την πρώτη συνεδρία. Είναι εξαιρετική επαγγελματίας, και πάνω από όλα άνθρωπος! Θα σκύψει με πραγματικό ενδιαφέρον και νοιάξιμο πάνω από τα θέματά σου.</div>
+<div class="review-text" data-el="en" style="display:none">Angeliki is an incredibly polite, sweet, and kind-hearted creature who will win you over from the first session. She is an excellent professional, and above all, a human being! She will look into your issues with genuine interest and care.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Dimitris</span><span data-el="en" style="display:none">Dimitris</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Πλέον κάθε φορά που επισκέπτομαι το γραφείο της Αγγελικής, νιώθω πως πηγαίνω να μιλήσω με μία πολύ καλή μου φίλη. Μία φίλη όμως που δεν με κάνει ποτέ να νιώσω άβολα. Αντίθετα, εκτός απο εξαίρετη επαγγελματίας είναι ένας Άνθρωπος που με το ήθος και την ευγένεια του καταφέρνει να ανοίγει απαλά τα φύλλα της καρδιάς μου και με βοηθάει να διαβάζουμε μαζί τις πιο δύσκολες σελίδες και να βαδίζουμε με ασφάλεια στα πιο δυσπρόσιτα σημεία της ψυχής μου. Επίσης με βοηθάει να βγαίνω από το λαβύρινθο της υπαρξής μου και να μαθαίνω να γράφω από την αρχή τη δική μου ιστορία, να δίνω νόημα σε ό,τι κάνω, να γίνομαι ο άνθρωπος που πάντα ήθελα. Την ευχαριστώ πολύ που είναι συνοδοιπόρος μου σε αυτό το ατέρμονο ταξίδι προς τα μέσα. Μετά από κάθε συνεδρία νιώθω να με κατακλύζει εσωτερική γαλήνη, ανακούφιση, διαύγεια και χαρά σαν να γυρίζω ξανά πίσω σε μένα με ασφάλεια στο παντοτινό ολόδικό μου σπίτι!!! Θα την πρότεινα με χαρά σε όποιον είναι έτοιμος γι αυτό το ταξίδι της ψυχοθεραπείας!!!</div>
+<div class="review-text" data-el="en" style="display:none">Now, every time I visit Angeliki's office, I feel like I am going to talk to a very good friend of mine. But a friend who never makes me feel uncomfortable. On the contrary, aside from being an excellent professional, she is a Human being who, with her ethos and politeness, manages to gently open the leaves of my heart and helps us read the most difficult pages together, walking safely through the most inaccessible parts of my soul. She also helps me exit the labyrinth of my existence and learn to write my own story from the beginning, to give meaning to everything I do, to become the person I always wanted to be. I thank her so much for being my companion on this endless inward journey. After each session, I feel overwhelmed by inner peace, relief, clarity, and joy, as if I am returning to myself safely, in my own forever home!!! I would happily recommend her to anyone who is ready for this journey of psychotherapy!!!</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Κατερίνα Κ</span><span data-el="en" style="display:none">Katerina K</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Εξαιρετική επαγγελματίας! Πλήρως καταρτισμένη, χαμογελαστή και ευγενέστατη! Τη συστήνω ανεπιφύλακτα!</div>
+<div class="review-text" data-el="en" style="display:none">Excellent professional! Fully qualified, smiling, and extremely polite! I highly recommend her!</div>
+<div class="review-meta"><span data-el="gr">Eleanna Spyropoulou</span><span data-el="en" style="display:none">Eleanna Spyropoulou</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Καταπληκτική!! Άρτια κατηρτισμένη στο αντικείμενο της με συνεχή εξέλιξη στις γνώσεις της!! Φαίνεται ότι αγαπάει αυτό που κάνει!! Απο τις πρώτες συνεδρίες αισθάνεται κανείς άνεση μαζί της!! Με έχει βοηθήσει αφάνταστα σε όλους τους τομείς της ζωής μου!! Όποτε της μιλάω νιώθω ότι μιλαω στο φύλακα άγγελό μου!! 5 αστέρια σίγουρα και λίγα είναι!</div>
+<div class="review-text" data-el="en" style="display:none">Amazing!! Perfectly trained in her field with continuous development in her knowledge!! It shows that she loves what she does!! From the very first sessions, one feels comfortable with her!! She has helped me incredibly in all areas of my life!! Whenever I talk to her, I feel like I'm talking to my guardian angel!! 5 stars for sure, and even that is an understatement!</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Μαν Ξυλ</span><span data-el="en" style="display:none">Man Xil</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Η ζωή είναι καλύτερη για μένα η Αγγελική φρόντισε για αυτό με πολύτιμες συμβουλές εξαρχής χωρίς να γνωρίζουμε καλά ο ένας τον άλλο αποδείχθηκαν πολύ σημαντικές ώστε να ισορροπήσει η ζωή μου και να βρω ξανά τον χαμένο μου εαυτό..Μ έκανε να καταλάβω πόσο σημαντικός είμαι και σίγουρα είναι άτομο που μπορεί κανείς να εμπιστευθεί και να φτιάξει ξάνα την ζωή του..Με συνεργασία και καλή διάθεση όλα γίνονται.</div>
+<div class="review-text" data-el="en" style="display:none">Life is better for me, Angeliki took care of that with valuable advice right from the start, even without knowing each other well; they proved to be very important in balancing my life and finding my lost self again. She made me understand how important I am, and she is definitely a person one can trust to rebuild their life. With cooperation and a good mood, everything is possible.</div>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
+<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
+<div class="review-meta"><span data-el="gr">Παναγιωτης Μαθιουδακης</span><span data-el="en" style="display:none">Panagiotis Mathioudakis</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Άριστη επαγγελματίας,πολυ φιλική και το κυριότερο ήταν ότι με έκανε να νιώσω άνετα από την πρώτη κιόλας μέρα για να μιλήσω για πράγματα που μου ήταν δύσκολα.Την συνιστώ ανεπιφύλακτα !!</div>
+<div class="review-text" data-el="en" style="display:none">Excellent professional, very friendly, and the most important thing was that she made me feel comfortable from the very first day to talk about things that were difficult for me. I highly recommend her!!</div>
+<div class="review-meta"><span data-el="gr">Tom Moynia</span><span data-el="en" style="display:none">Tom Moynia</span></div>
 </div>
 
 </div>
@@ -1126,10 +1285,25 @@ ul{list-style:none}
 <button onclick="scrollReviews(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
 </div>
 
-<div style="text-align:center;margin-top:1.5rem">
-<a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="review-link" data-el="gr">Δείτε περισσότερα στο Doctoranytime <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-<a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="review-link" data-el="en" style="display:none">See more on Doctoranytime <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<!-- Updated Review Buttons -->
+<div class="reviews-actions" style="display:flex; justify-content:center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+   <a href="https://www.google.com/search?client=safari&hs=VnKV&sa=X&sca_esv=cb596a67502e2f5f&rls=en&sxsrf=ANbL-n56UEsNJtvPHG8sg57is0cymoKp6w:1780378826370&q=Αγγελική-Ελευθερία+Ι.+Παπασαραντοπούλου+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLcwszQ3MjU0MzA1MjEztDA3NdzAyPiKMejcxHObgXDrud3ndp7bdW6d7rmpQObW863ndgDJxnPrz21UODdTT-HcgnMbzzcAcTMQN57beG7v-ZZz-4Ei-8_3AjXsP9-qEJRalplaXryIlQaGAgDyUnp4xQAAAA&rldimm=17869725160524618751&tbm=lcl&hl=en-GR&ved=2ahUKEwjJtYv86-eUAxV_RPEDHTl2F0UQ9fQKegQIShAG&biw=1728&bih=994&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="review-btn" data-el="gr">
+      <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      ΑΞΙΟΛΟΓΗΣΕΙΣ GOOGLE
+   </a>
+   <a href="https://www.google.com/search?client=safari&hs=VnKV&sa=X&sca_esv=cb596a67502e2f5f&rls=en&sxsrf=ANbL-n56UEsNJtvPHG8sg57is0cymoKp6w:1780378826370&q=Αγγελική-Ελευθερία+Ι.+Παπασαραντοπούλου+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLcwszQ3MjU0MzA1MjEztDA3NdzAyPiKMejcxHObgXDrud3ndp7bdW6d7rmpQObW863ndgDJxnPrz21UODdTT-HcgnMbzzcAcTMQN57beG7v-ZZz-4Ei-8_3AjXsP9-qEJRalplaXryIlQaGAgDyUnp4xQAAAA&rldimm=17869725160524618751&tbm=lcl&hl=en-GR&ved=2ahUKEwjJtYv86-eUAxV_RPEDHTl2F0UQ9fQKegQIShAG&biw=1728&bih=994&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="review-btn" data-el="en" style="display:none">
+      <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      GOOGLE REVIEWS
+   </a>
+   
+   <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou#review-section" target="_blank" rel="noopener" class="review-btn" data-el="gr">
+      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" style="width:28px;height:28px;border-radius:50%;"> ΑΞΙΟΛΟΓΗΣΕΙΣ DOCTORANYTIME
+   </a>
+   <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou#review-section" target="_blank" rel="noopener" class="review-btn" data-el="en" style="display:none">
+      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" style="width:28px;height:28px;border-radius:50%;"> DOCTORANYTIME REVIEWS
+   </a>
 </div>
+
 </div>
 </section>
 
@@ -1173,25 +1347,40 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-3">
-    <a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
+    <a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Διεύθυνση</div>
       <div class="contact-item-label" data-el="en" style="display:none">Address</div>
-      <div class="contact-item-value" data-el="gr"><a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
-      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
+      <div class="contact-item-value" data-el="gr"><a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
+      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
     </div>
   </div>
-
-  <div class="contact-socials reveal reveal-delay-4">
-    <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" aria-label="Doctoranytime" style="overflow:hidden; border:none; padding:0;">
+  
+  <!-- Grouped Socials using contact-item format -->
+  <div class="contact-item reveal reveal-delay-4" style="margin-top:0.5rem">
+    <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+    </a>
+    <div>
+      <div class="contact-item-label">Facebook</div>
+      <div class="contact-item-value"><a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener">/papasarantopoulou</a></div>
+    </div>
+  </div>
+  
+  <div class="contact-item reveal reveal-delay-4">
+    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon" style="border:none;">
       <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="DoctorAnytime" style="width:100%; height:100%; object-fit:contain; border-radius:50%; background-color:#fff;">
     </a>
+    <div>
+      <div class="contact-item-label">Doctoranytime</div>
+      <div class="contact-item-value"><a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" data-el="gr">Κλείσε Ραντεβού</a><a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" data-el="en" style="display:none">Book Appointment</a></div>
+    </div>
   </div>
 </div>
 </div>
+<!-- Pinned Map Embed targeting exact address -->
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.426296331902!2d23.74381881533034!3d37.99042977972054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b7c4a1b8d5%3A0x8e8a0058f8b1c4c8!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEEuIFN0ZXBhbiAxMTQgNzEsIEdyZWVjZQ!5e0!3m2!1sen!2sus!4v1628172827182!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
@@ -1243,19 +1432,15 @@ currentLang=currentLang==='gr'?'en':'gr';
 const showLang=currentLang;
 const hideLang=currentLang==='gr'?'en':'gr';
 
-// Toggle standard elements
 document.querySelectorAll('[data-el="'+showLang+'"]').forEach(el=>el.style.display='');
 document.querySelectorAll('[data-el="'+hideLang+'"]').forEach(el=>el.style.display='none');
 
-// Update Buttons text
 document.getElementById('langBtn').textContent=currentLang==='gr'?'EN':'GR';
 const mb=document.getElementById('mobLangBtn');
 if(mb)mb.textContent=currentLang==='gr'?'EN':'GR';
 
-// Update Document Lang tag
 document.documentElement.lang=currentLang==='gr'?'el':'en';
 
-// Update review read-more buttons
 document.querySelectorAll('.review-readmore').forEach(btn=>{
 const card=btn.closest('.review-card');
 const isExpanded=card&&card.classList.contains('expanded');
@@ -1291,8 +1476,53 @@ const isEN=currentLang==='en';
 btn.textContent=c.classList.contains('expanded')?(isEN?'Read less':'Λιγότερα'):(isEN?'Read more':'Διαβάστε περισσότερα');
 }
 
-// Review carousel
-function scrollReviews(d){document.getElementById('reviewsTrack').scrollBy({left:d*360,behavior:'smooth'})}
+// Auto-Scroll Reviews Logic
+const rTrack = document.getElementById('reviewsTrack');
+let rInterval = setInterval(autoScrollR, 3000);
+
+function autoScrollR() {
+    if(!rTrack) return;
+    const isMob = window.innerWidth <= 768;
+    const cards = rTrack.querySelectorAll('.review-card');
+    if(!cards.length) return;
+    
+    const gap = parseFloat(window.getComputedStyle(rTrack).gap) || 19.2;
+    const cardW = cards[0].offsetWidth + gap;
+    const scrollAmt = isMob ? cardW : cardW * 3;
+    
+    // Check if we hit the end (allow small 10px buffer)
+    if (rTrack.scrollLeft + rTrack.clientWidth >= rTrack.scrollWidth - 10) {
+        rTrack.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+        rTrack.scrollBy({ left: scrollAmt, behavior: 'smooth' });
+    }
+}
+
+if(rTrack) {
+    // Pause auto-scroll on interaction
+    rTrack.addEventListener('touchstart', () => clearInterval(rInterval), {passive: true});
+    rTrack.addEventListener('mouseenter', () => clearInterval(rInterval));
+    rTrack.addEventListener('mouseleave', () => {
+        clearInterval(rInterval);
+        rInterval = setInterval(autoScrollR, 3000);
+    });
+}
+
+function scrollReviews(d){
+    clearInterval(rInterval); // pause auto when manual scroll used
+    if(!rTrack) return;
+    const isMob = window.innerWidth <= 768;
+    const cards = rTrack.querySelectorAll('.review-card');
+    if(!cards.length) return;
+    const gap = parseFloat(window.getComputedStyle(rTrack).gap) || 19.2;
+    const cardW = cards[0].offsetWidth + gap;
+    const scrollAmt = isMob ? cardW : cardW * 3;
+    
+    rTrack.scrollBy({left: d * scrollAmt, behavior:'smooth'});
+    
+    // Restart interval
+    rInterval = setInterval(autoScrollR, 3000);
+}
 
 // Reveal observer
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
