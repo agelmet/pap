@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
-<!-- Minimalist Favicon: Greek letter Ψ intertwined with a thread -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='76' font-family='serif' font-size='95' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,6 +96,7 @@ ul{list-style:none}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
 .hero-text{max-width:700px;text-align:right}
+/* Reduced font size and applied italic for the main hero heading */
 .hero-h1{font-family:var(--font-display);font-size:clamp(1.3rem,3.2vw,2.2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
 .hero-h1 span.accent{color:var(--c-accent);font-style:italic}
 .hero-sub{font-size:.95rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
@@ -215,7 +215,8 @@ ul{list-style:none}
 .phil-card p{font-size:1rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
+/* Updated to standard background positioning to avoid zooming issues while keeping cover and your colors/gradients */
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center right / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
 .online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
@@ -228,6 +229,7 @@ ul{list-style:none}
 .online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
+/* Adjusted top padding to reduce the gap */
 .divider{position:relative;padding-top: 1.5rem; padding-bottom: clamp(3rem,8vw,5rem); padding-left: clamp(1.5rem,5vw,4rem); padding-right: clamp(1.5rem,5vw,4rem); overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
 .divider-text{text-align:center;position:relative;z-index:2;max-width:700px}
 .divider-tag{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
@@ -253,7 +255,8 @@ ul{list-style:none}
 .faq-intro p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .faq-item{border-bottom:1px solid var(--c-border-strong);overflow:hidden}
 .faq-q{padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1.2rem}
-.faq-q h3{font-family:var(--font-display);font-size:1rem;font-weight:400;color:var(--c-text);transition:color .3s}
+/* Enhanced Font Size and Weight for FAQ Questions */
+.faq-q h3{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--c-text);transition:color .3s}
 .faq-q:hover h3{color:var(--c-accent)}
 .faq-q-icon{width:26px;height:26px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease-out-expo);font-size:.75rem;color:var(--c-text-soft)}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
@@ -274,7 +277,8 @@ ul{list-style:none}
 .glossary-card h4::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--c-accent-light);flex-shrink:0;opacity:.6}
 .glossary-card p{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 .glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-text);line-height:1.5}
-.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.7rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em}
+/* Quote Attribution Font Size Increased */
+.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em; font-weight: 400;}
 
 /* REVIEWS */
 .reviews{background:var(--c-bg-alt);overflow:hidden}
@@ -331,8 +335,12 @@ ul{list-style:none}
 .contact-item-value{font-size:.95rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
 .contact-item-value a{color:rgba(250,248,245,.85);transition:color .3s}
 .contact-item-value a:hover{color:var(--c-accent-light)}
+.contact-socials{display:flex;gap:.8rem;margin-top:.8rem}
+.contact-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo); overflow:hidden;}
+.contact-socials a:hover{border-color:var(--c-accent);background:var(--c-accent)}
+.contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
+.contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
-/* Valid map embed URL linking to the exact location */
 .contact-map iframe{width:100%;height:100%;border:0;}
 
 /* EMERGENCY */
@@ -384,17 +392,17 @@ ul{list-style:none}
   .hero-bg::after{background:linear-gradient(to top, rgba(250,248,245,1) 0%, rgba(250,248,245,.95) 40%, rgba(250,248,245,0) 80%);}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
-  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.85rem;letter-spacing:.25em}
+  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
   /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
-  .hero-sub{font-size:1.1rem;line-height:1.7;margin-bottom:2rem}
-  .hero-btn{font-size:.85rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
+  .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
+  .hero-btn{font-size:.58rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
   .hero-scroll{bottom:1.2rem}
   .section{padding:clamp(2.5rem,8vw,4rem) 1.2rem}
   .section-title{font-size:clamp(1.3rem,5vw,2.0rem);line-height:1.25}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
-  .about-text p{font-size:1rem}
+  .about-text p{font-size:.82rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
   .cv-page h2{margin-bottom:1.5rem;}
   .cv-content h4{font-size: .9rem;}
@@ -420,10 +428,19 @@ ul{list-style:none}
   .review-card{min-width:100%;max-width:100%;padding:1.5rem;flex: 0 0 100%;}
   .reviews-score{font-size:2.2rem}
   .contact-quote{font-size:1.05rem}
-  .faq-q h3{font-size:.92rem}
+  /* Bolder, slightly larger FAQ questions on mobile */
+  .faq-q h3{font-size:1.05rem; font-weight:600;}
   .faq-closing-quote{font-size:1.1rem;}
+  /* Custom Quote Attribution Size on mobile */
+  .glossary-footer-quote span{font-size:.9rem;}
   .marquee-item{font-size:.7rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:480px){
+  .space-gallery{grid-template-columns:1fr}
+  .review-card{min-width:260px}
+  .philosophy-grid{gap:1rem}
 }
 </style>
 </head>
@@ -445,8 +462,6 @@ ul{list-style:none}
   <div class="nav-brand-text">
     <div class="nav-brand-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
     <div class="nav-brand-name" data-el="en" style="display:none">Angeliki<span class="straight-dash">-</span>Eleftheria I. Papasarantopoulou</div>
-    <div class="nav-brand-title" data-el="gr">Ψυχολόγος</div>
-    <div class="nav-brand-title" data-el="en" style="display:none">Psychologist</div>
   </div>
 </a>
 <div class="nav-right">
@@ -485,7 +500,7 @@ ul{list-style:none}
 <div class="hero-content">
 <div class="hero-text">
   
-  <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από&nbsp;μια&nbsp;άλλη&nbsp;οπτική.</span></h1>
+  <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από μια άλλη οπτική.</span></h1>
   <h1 class="hero-h1" data-el="en" style="display:none">Whatever you're facing, it doesn't define you.<br><span class="accent">Together, we can look at it from a different perspective.</span></h1>
   
   <p class="hero-sub" data-el="gr">Εδώ θα βρεις έναν ζεστό και ασφαλή χώρο, όπου μπορείς να είσαι ο εαυτός σου.<br>Χωρίς επίκριση – με αποδοχή, κατανόηση και στήριξη σε όσα σε απασχολούν.</p>
@@ -565,7 +580,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- CV SECTION -->
 <section class="section cv-page" id="cv">
 <div class="section-inner">
   <div class="section-tag reveal" data-el="gr">Εκπαίδευση & Εμπειρία</div>
@@ -639,7 +653,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- SERVICES -->
 <section class="section services" id="services">
 <div class="section-inner">
 <div class="section-tag reveal" data-el="gr">Πώς Μπορούμε να Δουλέψουμε Μαζί</div>
@@ -709,7 +722,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- PHILOSOPHY -->
 <section class="section philosophy" id="philosophy">
 <div class="section-inner">
 <h2 class="section-title reveal reveal-delay-1" data-el="gr">Η Προσέγγισή μου<br>στην <span class="accent">θεραπεία</span></h2>
@@ -748,7 +760,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- ROADMAP -->
 <section class="section roadmap">
 <div class="section-inner">
 
@@ -773,7 +784,6 @@ ul{list-style:none}
   <div class="roadmap-step-empty"></div>
 </div>
 
-<!-- Trail 1→2 -->
 <div class="roadmap-trail roadmap-trail-1 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C420,40 600,40 700,40 C750,40 780,50 780,60" />
@@ -797,7 +807,6 @@ ul{list-style:none}
   </div>
 </div>
 
-<!-- Trail 2→3 -->
 <div class="roadmap-trail roadmap-trail-2 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C380,40 200,40 100,40 C50,40 20,50 20,60" />
@@ -825,7 +834,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- ONLINE -->
 <section class="section online">
 <div class="section-inner">
 <div class="online-grid">
@@ -850,7 +858,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- DIVIDER -->
 <div class="divider">
 <div class="divider-text">
 <div class="divider-tag" data-el="gr">Ανακάλυψη</div>
@@ -861,7 +868,6 @@ ul{list-style:none}
 </div>
 </div>
 
-<!-- SPACE -->
 <section class="section space" id="space">
 <div class="section-inner">
 <div class="section-tag reveal" data-el="gr">Ο Χώρος</div>
@@ -879,13 +885,11 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
 <div class="lightbox-close">✕</div>
 <img id="lightboxImg" src="" alt="">
 </div>
 
-<!-- FAQ -->
 <section class="section faq" id="faq">
 <div class="section-inner">
 <div class="faq-grid">
@@ -989,13 +993,10 @@ ul{list-style:none}
 </div>
 
 </div>
-<div class="faq-closing-quote reveal reveal-delay-1" data-el="gr">«Μερικές φορές, το πιο γενναίο πράγμα είναι να μιλήσεις. Και η θεραπεία αρχίζει όταν μιλάς σε κάποιον που σε ακούει πραγματικά».</div>
-<div class="faq-closing-quote reveal reveal-delay-1" data-el="en" style="display:none">"Sometimes, the bravest thing is to speak. And therapy begins when you talk to someone who truly listens to you."</div>
 </div>
 </div>
 </section>
 
-<!-- GLOSSARY -->
 <section class="section glossary">
 <div class="section-inner">
 <div class="glossary-intro">
@@ -1057,7 +1058,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- REVIEWS -->
 <section class="section reviews" id="reviews">
 <div class="section-inner">
 <div class="reviews-header">
@@ -1073,7 +1073,6 @@ ul{list-style:none}
 <div class="reviews-carousel">
 <div class="reviews-track" id="reviewsTrack">
 
-<!-- Doctoranytime Reviews -->
 <div class="review-card">
 <div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
 <div class="review-top"><span class="review-rating">10.0 <span class="review-stars-static">★★★★★</span></span></div>
@@ -1172,7 +1171,6 @@ ul{list-style:none}
 <div class="review-meta"><span data-el="gr">Δημητρα</span><span data-el="en" style="display:none">Dimitra</span></div>
 </div>
 
-<!-- Google Reviews -->
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
@@ -1186,7 +1184,7 @@ ul{list-style:none}
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητες μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
+<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητές μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
 <div class="review-text" data-el="en" style="display:none">I am truly grateful to have met Angeliki. She came into my life during one of the hardest periods, when I was drowning in problems and my emotions. She helped me believe in my potential again and overcome things I never thought I could. Angeliki is an incredibly sweet person who truly loves what she does, and it shows in every session. She radiates an incredible warmth and inspires trust from the very first moment, making you feel comfortable and able to open up without any fear. She is a flawless professional, but above all, a very good and bright person. This is reflected in every session, giving therapy a beautiful energy that makes the process so special. Her presence has changed my life.</div>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
@@ -1244,14 +1242,6 @@ ul{list-style:none}
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Εξαιρετική επαγγελματίας! Πλήρως καταρτισμένη, χαμογελαστή και ευγενέστατη! Τη συστήνω ανεπιφύλακτα!</div>
-<div class="review-text" data-el="en" style="display:none">Excellent professional! Fully qualified, smiling, and extremely polite! I highly recommend her!</div>
-<div class="review-meta"><span data-el="gr">Eleanna Spyropoulou</span><span data-el="en" style="display:none">Eleanna Spyropoulou</span></div>
-</div>
-
-<div class="review-card">
-<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
-<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
 <div class="review-text" data-el="gr">Καταπληκτική!! Άρτια κατηρτισμένη στο αντικείμενο της με συνεχή εξέλιξη στις γνώσεις της!! Φαίνεται ότι αγαπάει αυτό που κάνει!! Απο τις πρώτες συνεδρίες αισθάνεται κανείς άνεση μαζί της!! Με έχει βοηθήσει αφάνταστα σε όλους τους τομείς της ζωής μου!! Όποτε της μιλάω νιώθω ότι μιλαω στο φύλακα άγγελό μου!! 5 αστέρια σίγουρα και λίγα είναι!</div>
 <div class="review-text" data-el="en" style="display:none">Amazing!! Perfectly trained in her field with continuous development in her knowledge!! It shows that she loves what she does!! From the very first sessions, one feels comfortable with her!! She has helped me incredibly in all areas of my life!! Whenever I talk to her, I feel like I'm talking to my guardian angel!! 5 stars for sure, and even that is an understatement!</div>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
@@ -1285,7 +1275,6 @@ ul{list-style:none}
 <button onclick="scrollReviews(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
 </div>
 
-<!-- Updated Review Buttons -->
 <div class="reviews-actions" style="display:flex; justify-content:center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
    <a href="https://www.google.com/search?client=safari&hs=VnKV&sa=X&sca_esv=cb596a67502e2f5f&rls=en&sxsrf=ANbL-n56UEsNJtvPHG8sg57is0cymoKp6w:1780378826370&q=Αγγελική-Ελευθερία+Ι.+Παπασαραντοπούλου+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLcwszQ3MjU0MzA1MjEztDA3NdzAyPiKMejcxHObgXDrud3ndp7bdW6d7rmpQObW863ndgDJxnPrz21UODdTT-HcgnMbzzcAcTMQN57beG7v-ZZz-4Ei-8_3AjXsP9-qEJRalplaXryIlQaGAgDyUnp4xQAAAA&rldimm=17869725160524618751&tbm=lcl&hl=en-GR&ved=2ahUKEwjJtYv86-eUAxV_RPEDHTl2F0UQ9fQKegQIShAG&biw=1728&bih=994&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="review-btn" data-el="gr">
       <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
@@ -1307,7 +1296,6 @@ ul{list-style:none}
 </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section contact" id="contact">
 <div class="section-inner">
 <div class="contact-grid">
@@ -1356,7 +1344,6 @@ ul{list-style:none}
     </div>
   </div>
   
-  <!-- Grouped Socials using contact-item format -->
   <div class="contact-item reveal reveal-delay-4" style="margin-top:0.5rem">
     <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
@@ -1378,20 +1365,17 @@ ul{list-style:none}
   </div>
 </div>
 </div>
-<!-- Pinned Map Embed targeting exact address -->
 <div class="contact-map reveal reveal-delay-4">
   <iframe src="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
 
-<!-- EMERGENCY -->
 <div class="emergency">
 <p data-el="gr">Αν αισθάνεσαι ότι εσύ ή κάποιος κοντινός σου άνθρωπος βρίσκεται σε άμεση ψυχική κρίση, υπάρχει βοήθεια: <a href="tel:1018">Γραμμή Παρέμβασης για την Αυτοκτονία 1018</a>, όλο το 24ωρο.</p>
 <p data-el="en" style="display:none">If you feel that you or someone close to you is in an immediate mental health crisis, help is available: <a href="tel:1018">Suicide Intervention Line 1018</a>, 24 hours a day.</p>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
 <div class="footer-inner">
 <div class="footer-copy" data-el="gr">© 2026 Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου</div>
@@ -1461,6 +1445,16 @@ function toggleFaq(el){
 const w=el.classList.contains('active');
 document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('active');i.querySelector('.faq-a').style.maxHeight='0'});
 if(!w){el.classList.add('active');el.querySelector('.faq-a').style.maxHeight=el.querySelector('.faq-a').scrollHeight+'px'}
+}
+
+// CV Modal
+function openCvModal() {
+  document.getElementById('cvModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeCvModal() {
+  document.getElementById('cvModal').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
 // Lightbox
